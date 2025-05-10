@@ -30,14 +30,6 @@
 			<a href="/about" class="text-white transition-colors hover:text-[var(--color-primary)]"
 				>About Us</a
 			>
-			<a
-				href="/privacypolicy"
-				class="text-white transition-colors hover:text-[var(--color-primary)]">Privacy Policy</a
-			>
-			<a
-				href="/termsofservice"
-				class="text-white transition-colors hover:text-[var(--color-primary)]">Terms of Service</a
-			>
 		</div>
 		<!-- Mobile menu button -->
 		<button
