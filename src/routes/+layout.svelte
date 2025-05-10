@@ -21,6 +21,9 @@
 			<a href="/features" class="text-white transition-colors hover:text-[var(--color-primary)]"
 				>Features</a
 			>
+			<a href="/tools" class="text-white transition-colors hover:text-[var(--color-primary)]"
+				>Tools</a
+			>
 			<a href="/pricing" class="text-white transition-colors hover:text-[var(--color-primary)]"
 				>Pricing</a
 			>
@@ -67,6 +70,11 @@
 				href="/features"
 				class="text-white transition-colors hover:text-[var(--color-primary)]"
 				onclick={() => (mobileNavOpen = false)}>Features</a
+			>
+			<a
+				href="/tools"
+				class="text-white transition-colors hover:text-[var(--color-primary)]"
+				onclick={() => (mobileNavOpen = false)}>Tools</a
 			>
 			<a
 				href="/pricing"
