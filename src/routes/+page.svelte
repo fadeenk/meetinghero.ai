@@ -6,16 +6,16 @@
 	<!-- Hero Section -->
 	<section
 		class="flex w-full flex-col items-center justify-center px-4 py-20"
-		style="background: linear-gradient(to bottom, var(--color-bg-dark), var(--color-bg));"
+		style="background: linear-gradient(to bottom, var(--color-bg), var(--color-bg-dark), var(--color-bg));"
 	>
 		<h1
 			class="mb-4 text-center text-4xl font-bold drop-shadow-lg md:text-6xl"
 			style="color: var(--color-primary);"
 		>
-			Stop Scrambling, Start Meeting Prepared
+			Stop Scrambling, Start Your Meeting Prepared
 		</h1>
 		<p class="mb-8 max-w-2xl text-center text-lg text-gray-200 md:text-2xl">
-			MeetingHero.AI: Get Automated Intel on Attendees and Companies Before Every Meeting
+			Get Automated Intel on Attendees and Companies Before Every Meeting
 		</p>
 		<!-- Visual Placeholder -->
 		<div
@@ -40,7 +40,6 @@
 				See How It Works
 			</a>
 		</div>
-		<p class="mt-2 text-sm text-gray-400">No credit card required</p>
 	</section>
 
 	<!-- Problem/Solution Section -->
@@ -56,7 +55,8 @@
 		</h2>
 		<p class="mb-2 text-center text-lg text-gray-300">Wasting time researching every attendee?</p>
 		<p class="text-center text-lg font-semibold text-white">
-			MeetingHero.AI automatically prepares you, delivering key insights directly.
+			MeetingHero.AI automatically prepares you, delivering key insights directly to where you need
+			them.
 		</p>
 	</section>
 
@@ -77,7 +77,7 @@
 				style="background: var(--color-bg-dark); border-color: var(--color-primary);"
 			>
 				<span class="mb-2 text-3xl">⏳</span>
-				<h3 class="mb-1 text-lg font-bold">Save Time</h3>
+				<h3 class="mb-1 text-center text-lg font-bold">Save Time</h3>
 				<p class="text-center text-gray-300">Save hours of prep time weekly.</p>
 			</div>
 			<div
@@ -85,7 +85,7 @@
 				style="background: var(--color-bg-dark); border-color: var(--color-secondary);"
 			>
 				<span class="mb-2 text-3xl">💡</span>
-				<h3 class="mb-1 text-lg font-bold">Be Confident & Informed</h3>
+				<h3 class="mb-1 text-center text-lg font-bold">Be Confident & Informed</h3>
 				<p class="text-center text-gray-300">Walk into every meeting confident and informed.</p>
 			</div>
 			<div
@@ -93,17 +93,17 @@
 				style="background: var(--color-bg-dark); border-color: var(--color-accent);"
 			>
 				<span class="mb-2 text-3xl">🤝</span>
-				<h3 class="mb-1 text-lg font-bold">Build Stronger Connections</h3>
+				<h3 class="mb-1 text-center text-lg font-bold">Build Stronger Connections</h3>
 				<p class="text-center text-gray-300">
 					Have more personalized and productive conversations.
 				</p>
 			</div>
 			<div
 				class="flex flex-col items-center rounded-xl border p-6 shadow-md"
-				style="background: var(--color-bg-dark); border-color: var(--color-primary);"
+				style="background: var(--color-bg-dark); border-color: var(--color-secondary);"
 			>
 				<span class="mb-2 text-3xl">⚡</span>
-				<h3 class="mb-1 text-lg font-bold">Effortless Automation</h3>
+				<h3 class="mb-1 text-center text-lg font-bold">Effortless Automation</h3>
 				<p class="text-center text-gray-300">Seamlessly plugs into your calendar.</p>
 			</div>
 		</div>
@@ -200,7 +200,7 @@
 			class="mb-8 text-center text-2xl font-semibold md:text-3xl"
 			style="color: var(--color-secondary);"
 		>
-			Trusted by Professionals
+			Trusted by Many
 		</h2>
 		<div class="mb-8 flex flex-wrap items-center justify-center gap-8">
 			<!-- Placeholder logos -->
@@ -229,15 +229,12 @@
 			</blockquote>
 			<span class="font-semibold" style="color: var(--color-primary);">— Beta Tester</span>
 		</div>
-		<div class="mt-6 font-bold" style="color: var(--color-secondary);">
-			Launched on Product Hunt!
-		</div>
 	</section>
 
 	<!-- Secondary CTA -->
 	<section
 		class="flex w-full flex-col items-center px-4 py-12"
-		style="background: linear-gradient(to top, var(--color-bg-dark), var(--color-bg));"
+		style="background: linear-gradient(to top, var(--color-bg), var(--color-bg-dark));"
 	>
 		<a
 			href="#"
@@ -246,7 +243,6 @@
 		>
 			Try Free for 7 Days
 		</a>
-		<p class="mt-2 text-sm text-gray-400">No credit card required</p>
 	</section>
 
 	<!-- Footer -->
