@@ -123,7 +123,7 @@
 			goals, not your prep.
 		</p>
 		<a
-			href="/"
+			href="https://app.meetinghero.ai/"
 			class="rounded-full px-10 py-4 text-lg font-bold text-white shadow-lg transition-transform hover:scale-105"
 			style="background: linear-gradient(to right, var(--color-primary), var(--color-secondary));"
 		>

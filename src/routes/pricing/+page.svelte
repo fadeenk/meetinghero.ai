@@ -73,12 +73,14 @@
 		<div
 			class="flex w-full max-w-xl flex-col items-center rounded-xl bg-[var(--color-bg-dark)] p-8 shadow-lg"
 		>
-			<h2 class="mb-2 text-2xl font-bold" style="color: var(--color-primary);">
+			<h2 class="mb-2 text-xl font-bold" style="color: var(--color-primary);">
 				Try MeetingHero.AI Completely Free for 7 Days
 			</h2>
-			<p class="mb-2 text-lg text-gray-300">No Credit Card Required to Start.</p>
+			<p class="text-md mb-2" style="color: var(--color-positive);">
+				No Credit Card Required to Start.
+			</p>
 			<a
-				href="/"
+				href="https://app.meetinghero.ai/"
 				class="rounded-full px-8 py-3 text-lg font-bold text-white shadow-lg transition-transform hover:scale-105"
 				style="background: linear-gradient(to right, var(--color-primary), var(--color-secondary));"
 			>
@@ -120,7 +122,7 @@
 						{/each}
 					</ul>
 					<a
-						href="/"
+						href="https://app.meetinghero.ai/"
 						class="w-full rounded-full px-6 py-2 text-center text-base font-bold text-white shadow-lg transition-transform hover:scale-105"
 						style="background: linear-gradient(to right, var(--color-primary), var(--color-secondary));"
 					>

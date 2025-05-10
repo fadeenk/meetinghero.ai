@@ -26,7 +26,7 @@
 		</div>
 		<div class="flex flex-col gap-4 md:flex-row">
 			<a
-				href="#"
+				href="https://app.meetinghero.ai/"
 				class="rounded-full px-8 py-3 text-lg font-bold text-white shadow-lg transition-transform hover:scale-105"
 				style="background: linear-gradient(to right, var(--color-primary), var(--color-secondary));"
 			>
@@ -237,7 +237,7 @@
 		style="background: linear-gradient(to top, var(--color-bg), var(--color-bg-dark));"
 	>
 		<a
-			href="#"
+			href="https://app.meetinghero.ai/"
 			class="rounded-full px-12 py-4 text-xl font-bold text-white shadow-lg transition-transform hover:scale-105"
 			style="background: linear-gradient(to right, var(--color-primary), var(--color-secondary));"
 		>
