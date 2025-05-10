@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--color-bg: #000000;
+	--color-bg-dark: #1d1d1d;
+	--color-primary: #7447e1;
+	--color-secondary: #c147e1;
+	--color-accent: #4767e1;
+	--color-positive: #17d077;
+	--color-negative: #fa3411;
+	--color-info: #3268ff;
+	--color-warning: #ff9610;
+}
