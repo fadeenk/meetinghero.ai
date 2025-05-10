@@ -98,3 +98,15 @@
 </nav>
 
 {@render children()}
+
+<!-- Footer -->
+<footer
+	class="flex w-full flex-col items-center justify-between border-t px-4 py-6 text-sm text-gray-400 md:flex-row"
+	style="background: var(--color-bg); border-color: var(--color-bg-dark);"
+>
+	<div>© {new Date().getFullYear()} MeetingHero.AI. All rights reserved.</div>
+	<div class="mt-2 flex gap-4 md:mt-0">
+		<a href="/privacypolicy" class="hover:text-[var(--color-primary)]">Privacy Policy</a>
+		<a href="/termsofservice" class="hover:text-[var(--color-primary)]">Terms of Service</a>
+	</div>
+</footer>
