@@ -321,9 +321,37 @@ Best,
 	}
 
 	function getProgress() {
-		const visibleQuestions = getVisibleQuestions();
-		const currentIndex = visibleQuestions.findIndex((q) => q.id === currentStep);
-		return ((currentIndex + 1) / visibleQuestions.length) * 100;
+		// Start by assuming the longest possible path (5 questions)
+		let totalQuestionsInPath = 5;
+		let currentPositionInPath = 0;
+
+		// If user has answered q2, update the possible path length
+		if (answers['q2'] === 'no') {
+			// Path: q1 -> q2 -> q5 -> q6 (max 4 questions)
+			totalQuestionsInPath = 4;
+		} else if (answers['q2'] === 'yes' && answers['q3'] === 'no') {
+			// Path: q1 -> q2 -> q3 -> q7 (max 4 questions)
+			totalQuestionsInPath = 4;
+		}
+
+		// Calculate current position
+		if (currentStep === 1) {
+			currentPositionInPath = 1;
+		} else if (currentStep === 2) {
+			currentPositionInPath = 2;
+		} else if (currentStep === 3) {
+			currentPositionInPath = 3;
+		} else if (currentStep === 4) {
+			currentPositionInPath = 4;
+		} else if (currentStep === 5) {
+			currentPositionInPath = 3;
+		} else if (currentStep === 6) {
+			currentPositionInPath = 4;
+		} else if (currentStep === 7) {
+			currentPositionInPath = 5;
+		}
+
+		return (currentPositionInPath / totalQuestionsInPath) * 100;
 	}
 
 	function handleGoalSelection(value: string, checked: boolean) {
@@ -545,5 +573,26 @@ Best,
 				</button>
 			</div>
 		{/if}
+	</section>
+
+	<!-- Why Use This Tool Section -->
+	<section
+		class="flex w-full flex-col items-center px-4 py-16"
+		style="background: var(--color-bg-dark);"
+	>
+		<h2
+			class="mb-4 text-center text-2xl font-semibold md:text-3xl"
+			style="color: var(--color-secondary);"
+		>
+			Why Use This Tool? Save Time, Meet Smarter.
+		</h2>
+		<p class="max-w-2xl text-center text-lg text-white">
+			Unnecessary meetings are a major drain on valuable time, energy, and focus. This simple tool
+			helps you quickly evaluate whether a real-time meeting is truly the most effective way to
+			achieve your goal, or if an asynchronous method like email, chat, or a shared document would
+			be more efficient. By using this checklist before you schedule or accept an invitation, you
+			can reclaim hours for focused work, reduce meeting fatigue for yourself and your team, improve
+			communication clarity, and ensure that when you do meet, it's for a clear, productive purpose.
+		</p>
 	</section>
 </div>
