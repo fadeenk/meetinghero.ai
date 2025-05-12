@@ -87,7 +87,7 @@
 				Start your free trial today and experience the power of AI-driven meeting preparation.
 			</p>
 			<a
-				href="/signup"
+				href="https://app.meetinghero.ai/"
 				class="group relative inline-block rounded-full bg-[var(--color-primary)] px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
 			>
 				Get Started

@@ -89,7 +89,7 @@
 				No Credit Card Required to Start.
 			</p>
 			<a
-				href="/signup"
+				href="https://app.meetinghero.ai/"
 				class="group relative inline-block rounded-full bg-[var(--color-primary)] px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
 			>
 				Start Your Free Trial
@@ -139,7 +139,7 @@
 						{/each}
 					</ul>
 					<a
-						href="/signup"
+						href="https://app.meetinghero.ai/"
 						class="group relative inline-block w-full rounded-full bg-[var(--color-primary)] px-6 py-3 text-center text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
 					>
 						{plan.buttonText}
