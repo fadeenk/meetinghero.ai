@@ -135,7 +135,9 @@
 						>{step.icon}</span
 					>
 					<h3 class="mb-2 text-xl font-bold">{step.title}</h3>
-					<p class="text-center text-gray-300">{step.desc}</p>
+					<p class="text-center text-gray-300">
+						{@html step.desc.replace(/•/g, '<span style="color: var(--color-positive);">•</span>')}
+					</p>
 				</div>
 			{/each}
 		</div>
@@ -174,7 +176,7 @@
 		</div>
 		<a
 			href={base + '/features'}
-			class="group mt-8 flex items-center gap-2 text-lg font-semibold transition-all duration-300"
+			class="group relative z-10 mt-8 flex cursor-pointer items-center gap-2 text-lg font-semibold transition-all duration-300"
 			style="color: var(--color-primary);"
 		>
 			See all features
