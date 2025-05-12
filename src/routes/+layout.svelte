@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+	import { base } from '$app/paths';
 
 	let { children } = $props();
 	let mobileNavOpen = $state(false);
@@ -11,7 +12,7 @@
 >
 	<div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
 		<a
-			href="/"
+			href={base + '/'}
 			class="group flex items-center gap-2 text-2xl font-bold tracking-tight transition-transform hover:scale-105"
 			style="color: var(--color-primary);"
 		>
@@ -25,7 +26,7 @@
 		<div class="hidden gap-8 text-sm font-medium md:flex">
 			{#each ['Home', 'How It Works', 'Features', 'Tools', 'Pricing', 'FAQ', 'About Us'] as item}
 				<a
-					href={item === 'Home' ? '/' : '/' + item.toLowerCase().replace(/ /g, '-')}
+					href={item === 'Home' ? base + '/' : base + '/' + item.toLowerCase().replace(/ /g, '-')}
 					class="relative text-white transition-all duration-300 hover:text-[var(--color-primary)]"
 				>
 					{item}
@@ -61,8 +62,8 @@
 			{#each ['Home', 'How It Works', 'Features', 'Tools', 'Pricing', 'Support / FAQ', 'About Us', 'Privacy Policy', 'Terms of Service'] as item}
 				<a
 					href={item === 'Home'
-						? '/'
-						: '/' + item.toLowerCase().replace(' / ', '/').replace(' ', '-')}
+						? base + '/'
+						: base + '/' + item.toLowerCase().replace(' / ', '/').replace(' ', '-')}
 					class="group flex items-center text-white transition-all duration-300 hover:text-[var(--color-primary)]"
 					onclick={() => (mobileNavOpen = false)}
 				>
@@ -91,7 +92,7 @@
 	</div>
 	<div class="mt-4 flex gap-6 md:mt-0">
 		<a
-			href="/privacypolicy"
+			href={base + '/privacypolicy'}
 			class="group relative text-gray-400 transition-all duration-300 hover:text-[var(--color-primary)]"
 		>
 			Privacy Policy
@@ -100,7 +101,7 @@
 			></span>
 		</a>
 		<a
-			href="/termsofservice"
+			href={base + '/termsofservice'}
 			class="group relative text-gray-400 transition-all duration-300 hover:text-[var(--color-primary)]"
 		>
 			Terms of Service

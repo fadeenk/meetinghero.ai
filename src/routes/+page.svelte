@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	// Placeholder for future interactivity (e.g., modal, video, etc.)
 </script>
 
@@ -47,7 +48,7 @@
 				></div>
 			</a>
 			<a
-				href="/how-it-works"
+				href={base + '/how-it-works'}
 				class="group relative overflow-hidden rounded-full border px-8 py-4 text-lg font-semibold transition-all duration-300 hover:bg-[var(--color-bg-dark)]"
 				style="border-color: var(--color-primary); color: var(--color-primary);"
 			>
