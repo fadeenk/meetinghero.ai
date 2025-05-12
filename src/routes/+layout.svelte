@@ -85,7 +85,9 @@
 	style="background: var(--color-bg); border-color: var(--color-bg-dark);"
 >
 	<div class="flex items-center gap-2">
-		<span class="text-lg font-bold" style="color: var(--color-primary);">MeetingHero.AI</span>
+		<a href={base + '/'} class="text-lg font-bold" style="color: var(--color-primary);"
+			>MeetingHero.AI</a
+		>
 		<span>© {new Date().getFullYear()}. All rights reserved.</span>
 	</div>
 	<div class="mt-4 flex gap-6 md:mt-0">
