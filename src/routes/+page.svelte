@@ -173,7 +173,7 @@
 			{/each}
 		</div>
 		<a
-			href="/features"
+			href={base + '/features'}
 			class="group mt-8 flex items-center gap-2 text-lg font-semibold transition-all duration-300"
 			style="color: var(--color-primary);"
 		>

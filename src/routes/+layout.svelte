@@ -61,9 +61,7 @@
 		>
 			{#each ['Home', 'How It Works', 'Features', 'Tools', 'Pricing', 'Support / FAQ', 'About Us', 'Privacy Policy', 'Terms of Service'] as item}
 				<a
-					href={item === 'Home'
-						? base + '/'
-						: base + '/' + item.toLowerCase().replace(' / ', '/').replace(' ', '-')}
+					href={item === 'Home' ? base + '/' : base + '/' + item.toLowerCase().replace(/ /g, '-')}
 					class="group flex items-center text-white transition-all duration-300 hover:text-[var(--color-primary)]"
 					onclick={() => (mobileNavOpen = false)}
 				>
