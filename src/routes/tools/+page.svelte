@@ -55,7 +55,7 @@
 						class="group relative mt-auto inline-block rounded-full border px-6 py-3 text-center text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
 						style="border-color: {tool.color}; color: {tool.color};"
 					>
-						{tool.linkText}
+						{tool.link === '#' ? 'Coming Soon' : tool.linkText}
 						<span
 							class="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-[{tool.color}] to-[{tool.color}] opacity-0 transition-opacity duration-300 group-hover:opacity-10"
 						></span>
