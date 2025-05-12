@@ -3,196 +3,209 @@
 </script>
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
+	<!-- Headline -->
 	<section
-		class="flex w-full flex-col items-center justify-center px-4 py-16"
+		class="relative flex w-full flex-col items-center justify-center overflow-hidden px-4 py-24"
 		style="background: var(--color-bg-dark);"
 	>
+		<div
+			class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-primary)_0%,_transparent_70%)] opacity-10"
+		></div>
 		<h1
-			class="mb-4 text-center text-4xl font-bold md:text-5xl"
+			class="mb-6 text-center text-4xl leading-tight font-bold md:text-6xl"
 			style="color: var(--color-primary);"
 		>
 			Terms of Service
 		</h1>
-		<p class="mb-2 text-gray-400">Last updated: January 22nd, 2025</p>
+		<p class="mb-8 max-w-2xl text-center text-lg text-gray-300 md:text-xl">
+			Last updated: January 22nd, 2025
+		</p>
+		<p class="mx-auto w-full max-w-3xl px-4 text-center text-gray-300">
+			Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the
+			MeetingHero.AI website (the "Service") operated by Internet Candy Corporation ("us", "we", or
+			"our").
+		</p>
 	</section>
 
-	<section class="mx-auto w-full max-w-3xl space-y-8 px-4 py-12 text-gray-300">
-		<p>
-			Please read these Terms of Service (“Terms”, “Terms of Service”) carefully before using the
-			http://www.meetinghero.ai website (the “Service”) operated by Internet Candy Corporation
-			(“us”, “we”, or “our”).
-		</p>
-		<p>
-			Your access to and use of the Service is conditioned on your acceptance of and compliance with
-			these Terms. These Terms apply to all visitors, users and others who access or use the
-			Service.
-		</p>
-		<p>
-			By accessing or using the Service you agree to be bound by these Terms. If you disagree with
-			any part of the terms then you may not access the Service.
-		</p>
-
-		<h2 class="mt-8 mb-2 text-lg font-semibold" style="color: var(--color-primary);">Accounts</h2>
-		<p>
-			When you create an account with us, you must provide us information that is accurate,
-			complete, and current at all times. Failure to do so constitutes a breach of the Terms, which
-			may result in immediate termination of your account on our Service.
-		</p>
-		<p>
-			You are responsible for safeguarding the password that you use to access the Service and for
-			any activities or actions under your password, whether your password is with our Service or a
-			third-party service.
-		</p>
-		<p>
-			You agree not to disclose your password to any third party. You must notify us immediately
-			upon becoming aware of any breach of security or unauthorized use of your account.
-		</p>
-
-		<h2 class="mt-8 mb-2 text-lg font-semibold" style="color: var(--color-primary);">
-			Links to other web sites
-		</h2>
-		<p>
-			Our Service may contain links to third-party web sites or services that are not owned or
-			controlled by Internet Candy Corporation.
-		</p>
-		<p>
-			Internet Candy Corporation has no control over, and assumes no responsibility for, the
-			content, privacy policies, or practices of any third party web sites or services.
-		</p>
-		<p>
-			You further acknowledge and agree that MeetingHero.AI, Inc shall not be responsible or liable,
-			directly or indirectly, for any damage or loss caused or alleged to be caused by or in
-			connection with use of or reliance on any such content, goods or services available on or
-			through any such web sites or services.
-		</p>
-		<p>
-			We strongly advise you to read the terms and conditions and privacy policies of any
-			third-party web sites or services that you visit.
-		</p>
-
-		<h2 class="mt-8 mb-2 text-lg font-semibold" style="color: var(--color-primary);">
-			Termination
-		</h2>
-		<p>
-			We may terminate or suspend access to our Service immediately, without prior notice or
-			liability, for any reason whatsoever, including without limitation if you breach the Terms.
-		</p>
-		<p>
-			All provisions of the Terms which by their nature should survive termination shall survive
-			termination, including, without limitation, ownership provisions, warranty disclaimers,
-			indemnity and limitations of liability.
-		</p>
-		<p>
-			We may terminate or suspend your account immediately, without prior notice or liability, for
-			any reason whatsoever, including without limitation if you breach the Terms.
-		</p>
-		<p>
-			Upon termination, your right to use the Service will immediately cease. If you wish to
-			terminate your account, you may simply discontinue using the Service.
-		</p>
-		<p>
-			All provisions of the Terms which by their nature should survive termination shall survive
-			termination, including, without limitation, ownership provisions, warranty disclaimers,
-			indemnity and limitations of liability.
-		</p>
-
-		<h2 class="mt-8 mb-2 text-lg font-semibold" style="color: var(--color-primary);">
-			Governing law
-		</h2>
-		<p>
-			These Terms shall be governed and construed in accordance with the laws of State of
-			Incorporation, United States, without regard to its conflict of law provisions.
-		</p>
-		<p>
-			Our failure to enforce any right or provision of these Terms will not be considered a waiver
-			of those rights. If any provision of these Terms is held to be invalid or unenforceable by a
-			court, the remaining provisions of these Terms will remain in effect. These Terms constitute
-			the entire agreement between us regarding our Service, and supersede and replace any prior
-			agreements we might have between us regarding the Service.
-		</p>
-
-		<h2 class="mt-8 mb-2 text-lg font-semibold" style="color: var(--color-primary);">
-			Disclaimer of warranties
-		</h2>
-		<p>
-			Your use of the website is at your sole risk unless otherwise explicitly stated. The website,
-			including all related services and content is provided on an “as is” “as available” and “with
-			all faults” basis. To the extent permitted by law, MeetingHero.AI, Inc and its affiliates
-			disclaim all express or implied conditions, representations, and warranties of any kind,
-			including any implied warranty or condition of merchantability, satisfactory quality, fitness
-			for a particular purpose, or noninfringement. Internet Candy Corporation and its affiliates
-			make no representations, warranties, conditions or guarantees as to the usefulness, quality,
-			suitability, truth, accuracy, or completeness of the website.
-		</p>
-		<p>
-			MeetingHero.AI, Inc and its affiliates make no warranty or representation that: (a) the
-			website or MeetingHero.AI, Inc services or MeetingHero.AI, Inc-powered third party services
-			will be uninterrupted, timely, secure, or error-free; (b) the results that may be obtained
-			from the use of the website or MeetingHero.AI, Inc-powered services will be accurate or
-			reliable; (c) the quality of any products, services, content, information, or other material
-			obtained from the website, MeetingHero.AI, Inc services or MeetingHero.AI, Inc-powered third
-			party services will meet your expectations or requirements; or (d) any errors in the website
-			will be corrected.
-		</p>
-		<p>
-			You assume all risk for any damage to your computer system or loss of data that results from
-			obtaining any content from the website, Internet Candy Corporation services, or
-			MeetingHero.AI, Inc-powered third party services.
-		</p>
-
-		<h2 class="mt-8 mb-2 text-lg font-semibold" style="color: var(--color-primary);">
-			Limitation of liability
-		</h2>
-		<p>
-			To the full extent permitted by law, Internet Candy Corporation and its affiliates are not
-			liable for any direct, indirect, punitive, special, incidental, consequential, or exemplary
-			damages (including, without limitation, loss of business, revenue, profits, goodwill, use,
-			data, electronically transmitted orders, or other economic advantage) arising out of or in
-			connection with the website or any Internet Candy Corporation services, even if
-			MeetingHero.AI, Inc or any of its affiliates have previously been advised of, or reasonably
-			could have foreseen, the possibility of such damages, however they arise, whether in breach of
-			contract or in tort (including negligence), including without limitation damages due to: (a)
-			the use of or the inability to use the website or services; (b) the cost of procurement of
-			substitute goods and services resulting from any goods, data, information, or services
-			purchased or obtained, or messages received or transactions entered into, through, or from the
-			website; (c) statements or conduct of any third party on the website, including without
-			limitation unauthorized access to or alteration of transmissions or data, malicious or
-			criminal behavior, or false or fraudulent transactions; or (d) content or information you may
-			download, use, modify, or distribute.
-		</p>
-		<p>
-			To the extent that any jurisdiction does not allow the exclusion or limitation of direct,
-			incidental or consequential damages, portions of the above limitation or exclusion may not
-			apply. MeetingHero.AI, Inc and its affiliates do not seek to exclude or restrict its liability
-			for personal injury arising from its negligence.
-		</p>
-		<p>
-			In the event you have any dispute with one or more third parties as a result of your use of
-			the website, content or services, or are in any way damaged as a result of any third party in
-			connection therewith, you hereby release and covenant not to sue or otherwise make a claim,
-			demand or file any legal action or institute any legal or regulatory proceedings against
-			MeetingHero.AI, Inc, its affiliates, officers, directors, employees, agents, representatives
-			and suppliers from, for any claims, actions, demands or damages (whether direct, indirect,
-			special, incidental or consequential), of whatever kind or nature, known or unknown, suspected
-			or unsuspected, whether foreseeable or not, disclosed or undisclosed.
-		</p>
-
-		<h2 class="mt-8 mb-2 text-lg font-semibold" style="color: var(--color-primary);">Changes</h2>
-		<p>
-			We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If
-			a revision is material we will try to provide at least 30 days notice prior to any new terms
-			taking effect. What constitutes a material change will be determined at our sole discretion.
-			By continuing to access or use our Service after those revisions become effective, you agree
-			to be bound by the revised terms. If you do not agree to the new terms, please stop using the
-			Service.
-		</p>
-
-		<h2 class="mt-8 mb-2 text-lg font-semibold" style="color: var(--color-primary);">Contact Us</h2>
-		<p>
-			If you have any questions about these Terms, please contact us at <a
-				href="mailto:support@meetinghero.ai"
-				class="text-[var(--color-secondary)] underline">support@meetinghero.ai</a
+	<!-- Main Content -->
+	<section class="relative mx-auto w-full max-w-4xl px-4 py-24">
+		<div
+			class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-primary)_0%,_transparent_70%)] opacity-5"
+		></div>
+		<div class="relative z-10 space-y-12">
+			<!-- Agreement -->
+			<div
+				class="group relative rounded-2xl border bg-[var(--color-bg-dark)] p-8 shadow-lg transition-all duration-300 hover:shadow-xl"
+				style="border-color: var(--color-primary);"
 			>
-		</p>
+				<h2 class="mb-6 text-2xl font-semibold" style="color: var(--color-primary);">
+					Agreement to Terms
+				</h2>
+				<p class="mb-4 text-gray-300">
+					Your access to and use of the Service is conditioned on your acceptance of and compliance
+					with these Terms. These Terms apply to all visitors, users and others who access or use
+					the Service.
+				</p>
+				<p class="text-gray-300">
+					By accessing or using the Service you agree to be bound by these Terms. If you disagree
+					with any part of the terms then you may not access the Service.
+				</p>
+				<div
+					class="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-transparent to-[var(--color-primary)] opacity-0 transition-opacity duration-300 group-hover:opacity-10"
+				></div>
+			</div>
+
+			<!-- Accounts -->
+			<div
+				class="group relative rounded-2xl border bg-[var(--color-bg-dark)] p-8 shadow-lg transition-all duration-300 hover:shadow-xl"
+				style="border-color: var(--color-secondary);"
+			>
+				<h2 class="mb-6 text-2xl font-semibold" style="color: var(--color-secondary);">Accounts</h2>
+				<div class="space-y-4 text-gray-300">
+					<p>
+						When you create an account with us, you must provide us information that is accurate,
+						complete, and current at all times. Failure to do so constitutes a breach of the Terms,
+						which may result in immediate termination of your account on our Service.
+					</p>
+					<p>
+						You are responsible for safeguarding the password that you use to access the Service and
+						for any activities or actions under your password, whether your password is with our
+						Service or a third-party service.
+					</p>
+					<p>
+						You agree not to disclose your password to any third party. You must notify us
+						immediately upon becoming aware of any breach of security or unauthorized use of your
+						account.
+					</p>
+				</div>
+				<div
+					class="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-transparent to-[var(--color-secondary)] opacity-0 transition-opacity duration-300 group-hover:opacity-10"
+				></div>
+			</div>
+
+			<!-- Links -->
+			<div
+				class="group relative rounded-2xl border bg-[var(--color-bg-dark)] p-8 shadow-lg transition-all duration-300 hover:shadow-xl"
+				style="border-color: var(--color-accent);"
+			>
+				<h2 class="mb-6 text-2xl font-semibold" style="color: var(--color-accent);">
+					Links to Other Websites
+				</h2>
+				<div class="space-y-4 text-gray-300">
+					<p>
+						Our Service may contain links to third-party web sites or services that are not owned or
+						controlled by Internet Candy Corporation.
+					</p>
+					<p>
+						Internet Candy Corporation has no control over, and assumes no responsibility for, the
+						content, privacy policies, or practices of any third party web sites or services.
+					</p>
+					<p>
+						You further acknowledge and agree that MeetingHero.AI shall not be responsible or
+						liable, directly or indirectly, for any damage or loss caused or alleged to be caused by
+						or in connection with use of or reliance on any such content, goods or services
+						available on or through any such web sites or services.
+					</p>
+				</div>
+				<div
+					class="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-transparent to-[var(--color-accent)] opacity-0 transition-opacity duration-300 group-hover:opacity-10"
+				></div>
+			</div>
+
+			<!-- Termination -->
+			<div
+				class="group relative rounded-2xl border bg-[var(--color-bg-dark)] p-8 shadow-lg transition-all duration-300 hover:shadow-xl"
+				style="border-color: var(--color-primary);"
+			>
+				<h2 class="mb-6 text-2xl font-semibold" style="color: var(--color-primary);">
+					Termination
+				</h2>
+				<div class="space-y-4 text-gray-300">
+					<p>
+						We may terminate or suspend access to our Service immediately, without prior notice or
+						liability, for any reason whatsoever, including without limitation if you breach the
+						Terms.
+					</p>
+					<p>
+						All provisions of the Terms which by their nature should survive termination shall
+						survive termination, including, without limitation, ownership provisions, warranty
+						disclaimers, indemnity and limitations of liability.
+					</p>
+					<p>
+						Upon termination, your right to use the Service will immediately cease. If you wish to
+						terminate your account, you may simply discontinue using the Service.
+					</p>
+				</div>
+				<div
+					class="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-transparent to-[var(--color-primary)] opacity-0 transition-opacity duration-300 group-hover:opacity-10"
+				></div>
+			</div>
+
+			<!-- Governing Law -->
+			<div
+				class="group relative rounded-2xl border bg-[var(--color-bg-dark)] p-8 shadow-lg transition-all duration-300 hover:shadow-xl"
+				style="border-color: var(--color-secondary);"
+			>
+				<h2 class="mb-6 text-2xl font-semibold" style="color: var(--color-secondary);">
+					Governing Law
+				</h2>
+				<div class="space-y-4 text-gray-300">
+					<p>
+						These Terms shall be governed and construed in accordance with the laws of State of
+						Incorporation, United States, without regard to its conflict of law provisions.
+					</p>
+					<p>
+						Our failure to enforce any right or provision of these Terms will not be considered a
+						waiver of those rights. If any provision of these Terms is held to be invalid or
+						unenforceable by a court, the remaining provisions of these Terms will remain in effect.
+					</p>
+				</div>
+				<div
+					class="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-transparent to-[var(--color-secondary)] opacity-0 transition-opacity duration-300 group-hover:opacity-10"
+				></div>
+			</div>
+
+			<!-- Changes -->
+			<div
+				class="group relative rounded-2xl border bg-[var(--color-bg-dark)] p-8 shadow-lg transition-all duration-300 hover:shadow-xl"
+				style="border-color: var(--color-accent);"
+			>
+				<h2 class="mb-6 text-2xl font-semibold" style="color: var(--color-accent);">
+					Changes to Terms
+				</h2>
+				<p class="text-gray-300">
+					We reserve the right, at our sole discretion, to modify or replace these Terms at any
+					time. If a revision is material we will try to provide at least 30 days notice prior to
+					any new terms taking effect. What constitutes a material change will be determined at our
+					sole discretion.
+				</p>
+				<div
+					class="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-transparent to-[var(--color-accent)] opacity-0 transition-opacity duration-300 group-hover:opacity-10"
+				></div>
+			</div>
+
+			<!-- Contact -->
+			<div
+				class="group relative rounded-2xl border bg-[var(--color-bg-dark)] p-8 shadow-lg transition-all duration-300 hover:shadow-xl"
+				style="border-color: var(--color-primary);"
+			>
+				<h2 class="mb-6 text-2xl font-semibold" style="color: var(--color-primary);">Contact Us</h2>
+				<p class="text-gray-300">
+					If you have any questions about these Terms, please contact us at
+					<a
+						href="mailto:support@meetinghero.ai"
+						class="group relative inline-block text-[var(--color-secondary)] transition-all duration-300 hover:text-[var(--color-primary)]"
+					>
+						support@meetinghero.ai
+						<span
+							class="absolute -bottom-1 left-0 h-0.5 w-0 bg-[var(--color-primary)] transition-all duration-300 group-hover:w-full"
+						></span>
+					</a>
+				</p>
+				<div
+					class="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-transparent to-[var(--color-primary)] opacity-0 transition-opacity duration-300 group-hover:opacity-10"
+				></div>
+			</div>
+		</div>
 	</section>
 </div>

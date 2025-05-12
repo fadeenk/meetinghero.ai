@@ -4,11 +4,14 @@
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
 	<section
-		class="flex w-full flex-col items-center justify-center px-4 py-16"
+		class="relative flex w-full flex-col items-center justify-center overflow-hidden px-4 py-24"
 		style="background: var(--color-bg-dark);"
 	>
+		<div
+			class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-primary)_0%,_transparent_70%)] opacity-10"
+		></div>
 		<h1
-			class="mb-4 text-center text-4xl font-bold md:text-5xl"
+			class="mb-6 text-center text-4xl leading-tight font-bold md:text-6xl"
 			style="color: var(--color-primary);"
 		>
 			Get Prepared in 3 Simple Steps
@@ -19,115 +22,83 @@
 		</p>
 	</section>
 
-	<!-- Step 1 -->
-	<section
-		class="flex w-full flex-col items-center gap-8 px-4 py-12 md:flex-row"
-		style="background: var(--color-bg);"
-	>
-		<div class="flex flex-1 flex-col items-center md:items-start">
-			<h2 class="mb-2 text-2xl font-semibold" style="color: var(--color-primary);">
-				1. Seamless Calendar Integration
-			</h2>
-			<p class="mb-4 max-w-lg text-gray-300">
-				Connect your Google or Outlook calendar in seconds. Your data is always secure, and you
-				choose which calendars to sync.
-			</p>
-			<ul class="mb-4 list-disc pl-6 text-gray-400">
-				<li>Fast, secure authentication</li>
-				<li>Select which calendars to sync</li>
-				<li>Privacy-first: you control your data</li>
-			</ul>
-		</div>
-		<!-- Visual Placeholder -->
-		<div class="flex flex-1 justify-center">
+	{#each [{ step: 1, title: 'Seamless Calendar Integration', color: 'var(--color-primary)', description: 'Connect your Google or Outlook calendar in seconds. Your data is always secure, and you choose which calendars to sync.', features: ['Fast, secure authentication', 'Select which calendars to sync', 'Privacy-first: you control your data'], placeholder: '[Calendar Connection Screenshot]', reverse: false }, { step: 2, title: 'AI-Powered Research', color: 'var(--color-secondary)', description: 'MeetingHero.AI automatically identifies your meeting attendees (excluding internal team members, based on your settings) and gathers relevant, publicly available information.', features: ['Pulls from trusted public sources (e.g., LinkedIn, news, company sites)', 'Focuses on relevance and conciseness', 'Customizable to your preferences'], placeholder: '[AI Data Sources Graphic]', reverse: true }, { step: 3, title: 'Tailored Prep Delivery', color: 'var(--color-accent)', description: 'Receive your personalized prep document right where you need it—via email, calendar invite, or your MeetingHero.AI dashboard. Choose your preferred delivery method and timing (e.g., 15 minutes before your meeting).', features: ['Flexible delivery: email, calendar, dashboard', 'Customizable timing', 'Clear, actionable insights'], placeholder: '[Prep Delivery Screenshot]', reverse: false }] as step, i}
+		<section
+			class="relative flex w-full flex-col items-center px-4 py-24"
+			style="background: {i % 2 === 0 ? 'var(--color-bg)' : 'var(--color-bg-dark)'};"
+		>
 			<div
-				class="flex h-44 w-72 items-center justify-center rounded-xl border-2 border-[var(--color-primary)] bg-[var(--color-bg-dark)] text-lg text-[var(--color-primary)] shadow-lg"
-			>
-				[Calendar Connection Screenshot]
-			</div>
-		</div>
-	</section>
-
-	<!-- Step 2 -->
-	<section
-		class="flex w-full flex-col items-center gap-8 px-4 py-12 md:flex-row-reverse"
-		style="background: var(--color-bg-dark);"
-	>
-		<div class="flex flex-1 flex-col items-center md:items-start">
-			<h2 class="mb-2 text-2xl font-semibold" style="color: var(--color-secondary);">
-				2. AI-Powered Research
-			</h2>
-			<p class="mb-4 max-w-lg text-gray-300">
-				MeetingHero.AI automatically identifies your meeting attendees (excluding internal team
-				members, based on your settings) and gathers relevant, publicly available information.
-			</p>
-			<ul class="mb-4 list-disc pl-6 text-gray-400">
-				<li>Pulls from trusted public sources (e.g., LinkedIn, news, company sites)</li>
-				<li>Focuses on relevance and conciseness</li>
-				<li>Customizable to your preferences</li>
-			</ul>
-		</div>
-		<!-- Visual Placeholder -->
-		<div class="flex flex-1 justify-center">
+				class="absolute inset-0 bg-[radial-gradient(circle_at_center,{step.color}_0%,_transparent_70%)] opacity-5"
+			></div>
 			<div
-				class="flex h-44 w-72 items-center justify-center rounded-xl border-2 border-[var(--color-secondary)] bg-[var(--color-bg)] text-lg text-[var(--color-secondary)] shadow-lg"
+				class="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center gap-8 md:flex-row {step.reverse
+					? 'md:flex-row-reverse'
+					: ''}"
 			>
-				[AI Data Sources Graphic]
+				<div class="flex flex-1 flex-col items-center md:items-start">
+					<div class="mb-6 flex items-center gap-4">
+						<div
+							class="flex h-12 w-12 items-center justify-center rounded-full text-xl font-bold"
+							style="background: {step.color}; color: var(--color-bg-dark);"
+						>
+							{step.step}
+						</div>
+						<h2 class="text-3xl font-semibold md:text-4xl" style="color: {step.color};">
+							{step.title}
+						</h2>
+					</div>
+					<p class="mb-6 max-w-lg text-lg text-gray-300">{step.description}</p>
+					<ul class="mb-6 space-y-3 text-gray-400">
+						{#each step.features as feature}
+							<li class="flex items-center">
+								<span class="mr-2 text-[var(--color-positive)]">•</span>
+								{feature}
+							</li>
+						{/each}
+					</ul>
+				</div>
+				<div class="flex flex-1 justify-center">
+					<div
+						class="group flex h-64 w-80 items-center justify-center rounded-2xl border-2 bg-[var(--color-bg-dark)] text-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+						style="border-color: {step.color}; color: {step.color};"
+					>
+						<span class="transform transition-transform duration-300 group-hover:scale-110"
+							>{step.placeholder}</span
+						>
+					</div>
+				</div>
 			</div>
-		</div>
-	</section>
-
-	<!-- Step 3 -->
-	<section
-		class="flex w-full flex-col items-center gap-8 px-4 py-12 md:flex-row"
-		style="background: var(--color-bg);"
-	>
-		<div class="flex flex-1 flex-col items-center md:items-start">
-			<h2 class="mb-2 text-2xl font-semibold" style="color: var(--color-accent);">
-				3. Tailored Prep Delivery
-			</h2>
-			<p class="mb-4 max-w-lg text-gray-300">
-				Receive your personalized prep document right where you need it—via email, calendar invite,
-				or your MeetingHero.AI dashboard. Choose your preferred delivery method and timing (e.g., 15
-				minutes before your meeting).
-			</p>
-			<ul class="mb-4 list-disc pl-6 text-gray-400">
-				<li>Flexible delivery: email, calendar, dashboard</li>
-				<li>Customizable timing</li>
-				<li>Clear, actionable insights</li>
-			</ul>
-		</div>
-		<!-- Visual Placeholder -->
-		<div class="flex flex-1 justify-center">
-			<div
-				class="flex h-44 w-72 items-center justify-center rounded-xl border-2 border-[var(--color-accent)] bg-[var(--color-bg-dark)] text-lg text-[var(--color-accent)] shadow-lg"
-			>
-				[Prep Delivery Screenshot]
-			</div>
-		</div>
-	</section>
+		</section>
+	{/each}
 
 	<!-- Benefit Summary & CTA -->
 	<section
-		class="flex w-full flex-col items-center justify-center px-4 py-16"
+		class="relative flex w-full flex-col items-center justify-center overflow-hidden px-4 py-24"
 		style="background: var(--color-bg-dark);"
 	>
-		<h2
-			class="mb-4 text-center text-2xl font-semibold md:text-3xl"
-			style="color: var(--color-primary);"
-		>
-			Save Time. Walk In Confident. Have Better Meetings.
-		</h2>
-		<p class="mb-8 max-w-2xl text-center text-lg text-gray-300">
-			With MeetingHero.AI, you'll always be prepared—without the manual research. Focus on your
-			goals, not your prep.
-		</p>
-		<a
-			href="https://app.meetinghero.ai/"
-			class="rounded-full px-10 py-4 text-lg font-bold text-white shadow-lg transition-transform hover:scale-105"
-			style="background: linear-gradient(to right, var(--color-primary), var(--color-secondary));"
-		>
-			Start Your Free Trial Today
-		</a>
+		<div
+			class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-primary)_0%,_transparent_70%)] opacity-10"
+		></div>
+		<div class="relative z-10 text-center">
+			<h2
+				class="mb-6 text-center text-3xl font-semibold md:text-4xl"
+				style="color: var(--color-primary);"
+			>
+				Save Time. Walk In Confident. Have Better Meetings.
+			</h2>
+			<p class="mb-8 max-w-2xl text-center text-xl text-gray-300">
+				With MeetingHero.AI, you'll always be prepared—without the manual research. Focus on your
+				goals, not your prep.
+			</p>
+			<a
+				href="/signup"
+				class="group relative inline-block rounded-full bg-[var(--color-primary)] px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
+			>
+				Start Your Free Trial Today
+				<span
+					class="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+				></span>
+			</a>
+		</div>
 	</section>
 </div>

@@ -6,42 +6,44 @@
 </script>
 
 <nav
-	class="sticky top-0 z-50 w-full border-b"
-	style="background: var(--color-bg); border-color: var(--color-bg-dark);"
+	class="sticky top-0 z-50 w-full border-b backdrop-blur-md transition-all duration-300"
+	style="background: rgba(0, 0, 0, 0.3); border-color: var(--color-bg-dark);"
 >
-	<div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
-		<a href="/" class="text-2xl font-bold tracking-tight" style="color: var(--color-primary);"
-			>MeetingHero.AI</a
+	<div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+		<a
+			href="/"
+			class="group flex items-center gap-2 text-2xl font-bold tracking-tight transition-transform hover:scale-105"
+			style="color: var(--color-primary);"
 		>
-		<div class="hidden gap-6 text-sm font-semibold md:flex">
-			<a href="/" class="text-white transition-colors hover:text-[var(--color-primary)]">Home</a>
-			<a href="/how-it-works" class="text-white transition-colors hover:text-[var(--color-primary)]"
-				>How It Works</a
-			>
-			<a href="/features" class="text-white transition-colors hover:text-[var(--color-primary)]"
-				>Features</a
-			>
-			<a href="/tools" class="text-white transition-colors hover:text-[var(--color-primary)]"
-				>Tools</a
-			>
-			<a href="/pricing" class="text-white transition-colors hover:text-[var(--color-primary)]"
-				>Pricing</a
-			>
-			<a href="/faq" class="text-white transition-colors hover:text-[var(--color-primary)]"
-				>Support / FAQ</a
-			>
-			<a href="/about" class="text-white transition-colors hover:text-[var(--color-primary)]"
-				>About Us</a
-			>
+			<span class="relative">
+				MeetingHero.AI
+				<span
+					class="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] transition-all duration-300 group-hover:w-full"
+				></span>
+			</span>
+		</a>
+		<div class="hidden gap-8 text-sm font-medium md:flex">
+			{#each ['Home', 'How It Works', 'Features', 'Tools', 'Pricing', 'FAQ', 'About Us'] as item}
+				<a
+					href={item === 'Home' ? '/' : '/' + item.toLowerCase().replace(/ /g, '-')}
+					class="relative text-white transition-all duration-300 hover:text-[var(--color-primary)]"
+				>
+					{item}
+					<span
+						class="absolute -bottom-1 left-0 h-0.5 w-0 bg-[var(--color-primary)] transition-all duration-300 hover:w-full"
+					></span>
+				</a>
+			{/each}
 		</div>
 		<!-- Mobile menu button -->
 		<button
-			class="flex items-center justify-center rounded p-2 focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none md:hidden"
+			class="flex items-center justify-center rounded-lg p-2 transition-all duration-300 hover:bg-[var(--color-bg-dark)] focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none md:hidden"
 			aria-label="Open navigation"
 			onclick={() => (mobileNavOpen = !mobileNavOpen)}
 		>
 			<svg
-				class="h-7 w-7 text-white"
+				class="h-7 w-7 text-white transition-transform duration-300"
+				class:rotate-90={mobileNavOpen}
 				fill="none"
 				stroke="currentColor"
 				viewBox="0 0 24 24"
@@ -54,53 +56,24 @@
 	<!-- Mobile Nav Links -->
 	{#if mobileNavOpen}
 		<div
-			class="animate-fade-in-down flex flex-col gap-4 border-b border-[var(--color-bg-dark)] bg-[var(--color-bg-dark)] px-4 pb-4 md:hidden"
+			class="animate-fade-in-down flex flex-col gap-4 border-b border-[var(--color-bg-dark)] bg-[var(--color-bg)] px-4 pb-4 md:hidden"
 		>
-			<a
-				href="/"
-				class="text-white transition-colors hover:text-[var(--color-primary)]"
-				onclick={() => (mobileNavOpen = false)}>Home</a
-			>
-			<a
-				href="/how-it-works"
-				class="text-white transition-colors hover:text-[var(--color-primary)]"
-				onclick={() => (mobileNavOpen = false)}>How It Works</a
-			>
-			<a
-				href="/features"
-				class="text-white transition-colors hover:text-[var(--color-primary)]"
-				onclick={() => (mobileNavOpen = false)}>Features</a
-			>
-			<a
-				href="/tools"
-				class="text-white transition-colors hover:text-[var(--color-primary)]"
-				onclick={() => (mobileNavOpen = false)}>Tools</a
-			>
-			<a
-				href="/pricing"
-				class="text-white transition-colors hover:text-[var(--color-primary)]"
-				onclick={() => (mobileNavOpen = false)}>Pricing</a
-			>
-			<a
-				href="/faq"
-				class="text-white transition-colors hover:text-[var(--color-primary)]"
-				onclick={() => (mobileNavOpen = false)}>Support / FAQ</a
-			>
-			<a
-				href="/about"
-				class="text-white transition-colors hover:text-[var(--color-primary)]"
-				onclick={() => (mobileNavOpen = false)}>About Us</a
-			>
-			<a
-				href="/privacypolicy"
-				class="text-white transition-colors hover:text-[var(--color-primary)]"
-				onclick={() => (mobileNavOpen = false)}>Privacy Policy</a
-			>
-			<a
-				href="/termsofservice"
-				class="text-white transition-colors hover:text-[var(--color-primary)]"
-				onclick={() => (mobileNavOpen = false)}>Terms of Service</a
-			>
+			{#each ['Home', 'How It Works', 'Features', 'Tools', 'Pricing', 'Support / FAQ', 'About Us', 'Privacy Policy', 'Terms of Service'] as item}
+				<a
+					href={item === 'Home'
+						? '/'
+						: '/' + item.toLowerCase().replace(' / ', '/').replace(' ', '-')}
+					class="group flex items-center text-white transition-all duration-300 hover:text-[var(--color-primary)]"
+					onclick={() => (mobileNavOpen = false)}
+				>
+					<span class="relative">
+						{item}
+						<span
+							class="absolute -bottom-1 left-0 h-0.5 w-0 bg-[var(--color-primary)] transition-all duration-300 group-hover:w-full"
+						></span>
+					</span>
+				</a>
+			{/each}
 		</div>
 	{/if}
 </nav>
@@ -109,12 +82,31 @@
 
 <!-- Footer -->
 <footer
-	class="flex w-full flex-col items-center justify-between border-t px-4 py-6 text-sm text-gray-400 md:flex-row"
+	class="flex w-full flex-col items-center justify-between border-t px-4 py-8 text-sm text-gray-400 md:flex-row"
 	style="background: var(--color-bg); border-color: var(--color-bg-dark);"
 >
-	<div>© {new Date().getFullYear()} MeetingHero.AI. All rights reserved.</div>
-	<div class="mt-2 flex gap-4 md:mt-0">
-		<a href="/privacypolicy" class="hover:text-[var(--color-primary)]">Privacy Policy</a>
-		<a href="/termsofservice" class="hover:text-[var(--color-primary)]">Terms of Service</a>
+	<div class="flex items-center gap-2">
+		<span class="text-lg font-bold" style="color: var(--color-primary);">MeetingHero.AI</span>
+		<span>© {new Date().getFullYear()}. All rights reserved.</span>
+	</div>
+	<div class="mt-4 flex gap-6 md:mt-0">
+		<a
+			href="/privacypolicy"
+			class="group relative text-gray-400 transition-all duration-300 hover:text-[var(--color-primary)]"
+		>
+			Privacy Policy
+			<span
+				class="absolute -bottom-1 left-0 h-0.5 w-0 bg-[var(--color-primary)] transition-all duration-300 group-hover:w-full"
+			></span>
+		</a>
+		<a
+			href="/termsofservice"
+			class="group relative text-gray-400 transition-all duration-300 hover:text-[var(--color-primary)]"
+		>
+			Terms of Service
+			<span
+				class="absolute -bottom-1 left-0 h-0.5 w-0 bg-[var(--color-primary)] transition-all duration-300 group-hover:w-full"
+			></span>
+		</a>
 	</div>
 </footer>

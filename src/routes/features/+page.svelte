@@ -5,11 +5,14 @@
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
 	<!-- Headline & Intro -->
 	<section
-		class="flex w-full flex-col items-center justify-center px-4 py-16"
+		class="relative flex w-full flex-col items-center justify-center overflow-hidden px-4 py-24"
 		style="background: var(--color-bg-dark);"
 	>
+		<div
+			class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-primary)_0%,_transparent_70%)] opacity-10"
+		></div>
 		<h1
-			class="mb-4 text-center text-4xl font-bold md:text-5xl"
+			class="mb-6 text-center text-4xl leading-tight font-bold md:text-6xl"
 			style="color: var(--color-primary);"
 		>
 			Powerful Features to Elevate Your Meeting Game
@@ -20,243 +23,78 @@
 		</p>
 	</section>
 
-	<!-- Automated Attendee Intelligence -->
-	<section
-		class="flex w-full flex-col items-center gap-8 px-4 py-12 md:flex-row"
-		style="background: var(--color-bg);"
-	>
-		<div class="flex flex-1 flex-col items-center md:items-start">
-			<h2 class="mb-2 text-2xl font-semibold" style="color: var(--color-primary);">
-				🧑‍💼 Automated Attendee Intelligence
-			</h2>
-			<p class="mb-2 text-gray-300">Get rich, up-to-date background info on everyone you meet:</p>
-			<ul class="mb-4 list-disc pl-6 text-gray-400">
-				<li>Location & Weather</li>
-				<li>Current Role & Job History</li>
-				<li>Education</li>
-				<li>Background Summary</li>
-			</ul>
-			<p class="font-semibold text-[var(--color-positive)]">
-				Benefit: Understand the individual's journey and context.
-			</p>
-		</div>
-		<div class="flex flex-1 justify-center">
+	<!-- Feature Sections -->
+	{#each [{ icon: '🧑‍💼', title: 'Attendee Intel', color: 'var(--color-primary)', description: 'Get rich profiles and backgrounds on everyone you meet.', features: ['Professional background', 'Recent activity', 'Shared connections'], benefit: "Walk into meetings knowing exactly who you're talking to", reverse: false }, { icon: '🏢', title: 'Company Deep Dives', color: 'var(--color-secondary)', description: 'Instantly understand company context and news.', features: ['Company overview', 'Recent news', 'Financial insights'], benefit: 'Understand the business context without hours of research', reverse: true }, { icon: '💬', title: 'AI Discussion Starters', color: 'var(--color-accent)', description: 'Get smart, relevant talking points for every meeting.', features: ['Personalized topics', 'Industry insights', 'Recent developments'], benefit: 'Never struggle to find conversation topics again', reverse: false }, { icon: '📅', title: 'Seamless Calendar Integration', color: 'var(--color-primary)', description: 'Works with Google & Outlook—no new tools to learn.', features: [], benefit: 'Works with your existing workflow.', reverse: true }, { icon: '📬', title: 'Flexible Delivery Options', color: 'var(--color-secondary)', description: 'Get your prep via email, calendar invite, or dashboard—your choice.', features: ['Email', 'Calendar Invite', 'Dashboard Access'], benefit: 'Get the information how and when you prefer.', reverse: false }, { icon: '⚙️', title: 'Customizable Delivery Settings', color: 'var(--color-accent)', description: 'Choose who you get prep for and when:', features: ['Only people not met before', 'People not met within X days', 'Everyone', 'Exclude domains (e.g., internal emails)'], benefit: 'Tailor the service to your specific needs and privacy preferences.', reverse: true }, { icon: '📊', title: 'Analytics Dashboard', color: 'var(--color-primary)', description: 'Visualize your meeting activity and the value MeetingHero.AI provides:', features: ['Meetings Count', 'Time in Meetings', 'Prep Time Saved', 'Profiles Pulled', 'Meeting Distribution by Day', 'Meeting Duration Breakdown'], benefit: 'Visualize your meeting activity and the value MH.AI provides.', reverse: false }, { icon: '🔍', title: 'Searchable Profile Database', color: 'var(--color-secondary)', description: 'Profiles are saved and searchable in your dashboard.', features: [], benefit: 'Build a personal CRM of meeting contacts and their background.', reverse: true }] as feature, i}
+		<section
+			class="relative flex w-full flex-col items-center px-4 py-24"
+			style="background: {i % 2 === 0 ? 'var(--color-bg)' : 'var(--color-bg-dark)'};"
+		>
 			<div
-				class="flex h-44 w-56 items-center justify-center rounded-xl border-2 border-[var(--color-primary)] bg-[var(--color-bg-dark)] text-4xl text-[var(--color-primary)] shadow-lg"
-			>
-				🧑‍💼
-			</div>
-		</div>
-	</section>
-
-	<!-- Company Deep Dives -->
-	<section
-		class="flex w-full flex-col items-center gap-8 px-4 py-12 md:flex-row-reverse"
-		style="background: var(--color-bg-dark);"
-	>
-		<div class="flex flex-1 flex-col items-center md:items-start">
-			<h2 class="mb-2 text-2xl font-semibold" style="color: var(--color-secondary);">
-				🏢 Company Deep Dives
-			</h2>
-			<p class="mb-2 text-gray-300">Instantly understand the organizations you meet with:</p>
-			<ul class="mb-4 list-disc pl-6 text-gray-400">
-				<li>Company Overview</li>
-				<li>News & Recent Activities</li>
-				<li>Funding History & Key Investors</li>
-			</ul>
-			<p class="font-semibold text-[var(--color-positive)]">
-				Benefit: Understand their organization's status, recent activities, and financial health.
-			</p>
-		</div>
-		<div class="flex flex-1 justify-center">
+				class="absolute inset-0 bg-[radial-gradient(circle_at_center,{feature.color}_0%,_transparent_70%)] opacity-5"
+			></div>
 			<div
-				class="flex h-44 w-56 items-center justify-center rounded-xl border-2 border-[var(--color-secondary)] bg-[var(--color-bg)] text-4xl text-[var(--color-secondary)] shadow-lg"
+				class="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center gap-8 md:flex-row {feature.reverse
+					? 'md:flex-row-reverse'
+					: ''}"
 			>
-				🏢
+				<div class="flex flex-1 flex-col items-center md:items-start">
+					<h2 class="mb-4 text-3xl font-semibold md:text-4xl" style="color: {feature.color};">
+						{feature.icon}
+						{feature.title}
+					</h2>
+					<p class="mb-4 max-w-lg text-lg text-gray-300">{feature.description}</p>
+					{#if feature.features.length > 0}
+						<ul class="mb-6 space-y-2 text-gray-400">
+							{#each feature.features as item}
+								<li class="flex items-center">
+									<span class="mr-2 text-[var(--color-positive)]">•</span>
+									{item}
+								</li>
+							{/each}
+						</ul>
+					{/if}
+					<p class="font-semibold text-[var(--color-positive)]">
+						Benefit: {feature.benefit}
+					</p>
+				</div>
+				<div class="flex flex-1 justify-center">
+					<div
+						class="group flex h-48 w-64 items-center justify-center rounded-2xl border-2 bg-[var(--color-bg-dark)] text-5xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+						style="border-color: {feature.color}; color: {feature.color};"
+					>
+						<span class="transform transition-transform duration-300 group-hover:scale-110"
+							>{feature.icon}</span
+						>
+					</div>
+				</div>
 			</div>
-		</div>
-	</section>
-
-	<!-- Smart AI Discussion Starters -->
-	<section
-		class="flex w-full flex-col items-center gap-8 px-4 py-12 md:flex-row"
-		style="background: var(--color-bg);"
-	>
-		<div class="flex flex-1 flex-col items-center md:items-start">
-			<h2 class="mb-2 text-2xl font-semibold" style="color: var(--color-accent);">
-				💬 Smart AI Discussion Starters
-			</h2>
-			<p class="mb-2 text-gray-300">
-				AI-generated, tailored questions based on the collected info. Example prompts:
-			</p>
-			<ul class="mb-4 list-disc pl-6 text-gray-400">
-				<li>"What sparked the idea for your current project?"</li>
-				<li>"What lessons have you learned along the way?"</li>
-				<li>"What's your vision for the future?"</li>
-			</ul>
-			<p class="font-semibold text-[var(--color-positive)]">
-				Benefit: Go beyond small talk, dive into meaningful conversation points, and show you've
-				done your research.
-			</p>
-		</div>
-		<div class="flex flex-1 justify-center">
-			<div
-				class="flex h-44 w-56 items-center justify-center rounded-xl border-2 border-[var(--color-accent)] bg-[var(--color-bg-dark)] text-4xl text-[var(--color-accent)] shadow-lg"
-			>
-				💬
-			</div>
-		</div>
-	</section>
-
-	<!-- Seamless Calendar Integration -->
-	<section
-		class="flex w-full flex-col items-center gap-8 px-4 py-12 md:flex-row-reverse"
-		style="background: var(--color-bg-dark);"
-	>
-		<div class="flex flex-1 flex-col items-center md:items-start">
-			<h2 class="mb-2 text-2xl font-semibold" style="color: var(--color-primary);">
-				📅 Seamless Calendar Integration
-			</h2>
-			<p class="mb-4 text-gray-300">Works with Google & Outlook—no new tools to learn.</p>
-			<p class="font-semibold text-[var(--color-positive)]">
-				Benefit: Works with your existing workflow.
-			</p>
-		</div>
-		<div class="flex flex-1 justify-center">
-			<div
-				class="flex h-44 w-56 items-center justify-center rounded-xl border-2 border-[var(--color-primary)] bg-[var(--color-bg)] text-4xl text-[var(--color-primary)] shadow-lg"
-			>
-				📅
-			</div>
-		</div>
-	</section>
-
-	<!-- Flexible Delivery Options -->
-	<section
-		class="flex w-full flex-col items-center gap-8 px-4 py-12 md:flex-row"
-		style="background: var(--color-bg);"
-	>
-		<div class="flex flex-1 flex-col items-center md:items-start">
-			<h2 class="mb-2 text-2xl font-semibold" style="color: var(--color-secondary);">
-				📬 Flexible Delivery Options
-			</h2>
-			<p class="mb-2 text-gray-300">
-				Get your prep via email, calendar invite, or dashboard—your choice.
-			</p>
-			<ul class="mb-4 list-disc pl-6 text-gray-400">
-				<li>Email</li>
-				<li>Calendar Invite</li>
-				<li>Dashboard Access</li>
-			</ul>
-			<p class="font-semibold text-[var(--color-positive)]">
-				Benefit: Get the information how and when you prefer.
-			</p>
-		</div>
-		<div class="flex flex-1 justify-center">
-			<div
-				class="flex h-44 w-56 items-center justify-center rounded-xl border-2 border-[var(--color-secondary)] bg-[var(--color-bg-dark)] text-4xl text-[var(--color-secondary)] shadow-lg"
-			>
-				📬
-			</div>
-		</div>
-	</section>
-
-	<!-- Customizable Delivery Settings -->
-	<section
-		class="flex w-full flex-col items-center gap-8 px-4 py-12 md:flex-row-reverse"
-		style="background: var(--color-bg-dark);"
-	>
-		<div class="flex flex-1 flex-col items-center md:items-start">
-			<h2 class="mb-2 text-2xl font-semibold" style="color: var(--color-accent);">
-				⚙️ Customizable Delivery Settings
-			</h2>
-			<p class="mb-2 text-gray-300">Choose who you get prep for and when:</p>
-			<ul class="mb-4 list-disc pl-6 text-gray-400">
-				<li>Only people not met before</li>
-				<li>People not met within X days</li>
-				<li>Everyone</li>
-				<li>Exclude domains (e.g., internal emails)</li>
-			</ul>
-			<p class="font-semibold text-[var(--color-positive)]">
-				Benefit: Tailor the service to your specific needs and privacy preferences.
-			</p>
-		</div>
-		<div class="flex flex-1 justify-center">
-			<div
-				class="flex h-44 w-56 items-center justify-center rounded-xl border-2 border-[var(--color-accent)] bg-[var(--color-bg)] text-4xl text-[var(--color-accent)] shadow-lg"
-			>
-				⚙️
-			</div>
-		</div>
-	</section>
-
-	<!-- Analytics Dashboard -->
-	<section
-		class="flex w-full flex-col items-center gap-8 px-4 py-12 md:flex-row"
-		style="background: var(--color-bg);"
-	>
-		<div class="flex flex-1 flex-col items-center md:items-start">
-			<h2 class="mb-2 text-2xl font-semibold" style="color: var(--color-primary);">
-				📊 Analytics Dashboard
-			</h2>
-			<p class="mb-2 text-gray-300">
-				Visualize your meeting activity and the value MeetingHero.AI provides:
-			</p>
-			<ul class="mb-4 list-disc pl-6 text-gray-400">
-				<li>Meetings Count</li>
-				<li>Time in Meetings</li>
-				<li>Prep Time Saved</li>
-				<li>Profiles Pulled</li>
-				<li>Meeting Distribution by Day</li>
-				<li>Meeting Duration Breakdown</li>
-			</ul>
-			<p class="font-semibold text-[var(--color-positive)]">
-				Benefit: Visualize your meeting activity and the value MH.AI provides.
-			</p>
-		</div>
-		<div class="flex flex-1 justify-center">
-			<div
-				class="flex h-44 w-56 items-center justify-center rounded-xl border-2 border-[var(--color-primary)] bg-[var(--color-bg-dark)] text-4xl text-[var(--color-primary)] shadow-lg"
-			>
-				📊
-			</div>
-		</div>
-	</section>
-
-	<!-- Searchable Profile Database -->
-	<section
-		class="flex w-full flex-col items-center gap-8 px-4 py-12 md:flex-row-reverse"
-		style="background: var(--color-bg-dark);"
-	>
-		<div class="flex flex-1 flex-col items-center md:items-start">
-			<h2 class="mb-2 text-2xl font-semibold" style="color: var(--color-secondary);">
-				🔍 Searchable Profile Database
-			</h2>
-			<p class="mb-2 text-gray-300">Profiles are saved and searchable in your dashboard.</p>
-			<p class="font-semibold text-[var(--color-positive)]">
-				Benefit: Build a personal CRM of meeting contacts and their background.
-			</p>
-		</div>
-		<div class="flex flex-1 justify-center">
-			<div
-				class="flex h-44 w-56 items-center justify-center rounded-xl border-2 border-[var(--color-secondary)] bg-[var(--color-bg)] text-4xl text-[var(--color-secondary)] shadow-lg"
-			>
-				🔍
-			</div>
-		</div>
-	</section>
+		</section>
+	{/each}
 
 	<!-- CTA -->
 	<section
-		class="flex w-full flex-col items-center justify-center px-4 py-16"
-		style="background: var(--color-bg);"
+		class="relative flex w-full flex-col items-center justify-center overflow-hidden px-4 py-24"
+		style="background: var(--color-bg-dark);"
 	>
-		<a
-			href="https://app.meetinghero.ai/"
-			class="rounded-full px-10 py-4 text-lg font-bold text-white shadow-lg transition-transform hover:scale-105"
-			style="background: linear-gradient(to right, var(--color-primary), var(--color-secondary));"
-		>
-			Ready to Be the Most Prepared Person? Try MeetingHero.AI Free
-		</a>
+		<div
+			class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-primary)_0%,_transparent_70%)] opacity-10"
+		></div>
+		<div class="relative z-10 text-center">
+			<h2 class="mb-6 text-3xl font-semibold md:text-4xl" style="color: var(--color-primary);">
+				Ready to Transform Your Meetings?
+			</h2>
+			<p class="mb-8 text-xl text-gray-300">
+				Start your free trial today and experience the power of AI-driven meeting preparation.
+			</p>
+			<a
+				href="/signup"
+				class="group relative inline-block rounded-full bg-[var(--color-primary)] px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
+			>
+				Get Started
+				<span
+					class="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+				></span>
+			</a>
+		</div>
 	</section>
 </div>

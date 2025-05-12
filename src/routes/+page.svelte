@@ -5,56 +5,76 @@
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
 	<!-- Hero Section -->
 	<section
-		class="flex w-full flex-col items-center justify-center px-4 py-20"
+		class="relative flex w-full flex-col items-center justify-center overflow-hidden px-4 py-24"
 		style="background: linear-gradient(to bottom, var(--color-bg), var(--color-bg-dark), var(--color-bg));"
 	>
+		<div
+			class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-primary)_0%,_transparent_70%)] opacity-10"
+		></div>
 		<h1
-			class="mb-4 text-center text-4xl font-bold drop-shadow-lg md:text-6xl"
+			class="mb-6 text-center text-4xl leading-tight font-bold drop-shadow-lg md:text-7xl"
 			style="color: var(--color-primary);"
 		>
-			Stop Scrambling, Start Your Meeting Prepared
+			Stop Scrambling,<br />
+			<span
+				class="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] bg-clip-text text-transparent"
+			>
+				Start Your Meeting Prepared
+			</span>
 		</h1>
-		<p class="mb-8 max-w-2xl text-center text-lg text-gray-200 md:text-2xl">
+		<p class="mb-12 max-w-2xl text-center text-lg text-gray-200 md:text-2xl">
 			Get Automated Intel on Attendees and Companies Before Every Meeting
 		</p>
 		<!-- Visual Placeholder -->
 		<div
-			class="mb-8 flex h-56 w-full max-w-xl items-center justify-center rounded-xl border shadow-lg"
+			class="group mb-12 flex h-64 w-full max-w-2xl items-center justify-center rounded-2xl border shadow-xl transition-all duration-300 hover:shadow-2xl"
 			style="background: var(--color-bg-dark); border-color: var(--color-primary);"
 		>
-			<span class="text-xl" style="color: var(--color-secondary);">[Demo Video or Image Here]</span>
+			<span
+				class="text-xl transition-transform duration-300 group-hover:scale-105"
+				style="color: var(--color-secondary);">[Demo Video or Image Here]</span
+			>
 		</div>
 		<div class="flex flex-col gap-4 md:flex-row">
 			<a
 				href="https://app.meetinghero.ai/"
-				class="rounded-full px-8 py-3 text-lg font-bold text-white shadow-lg transition-transform hover:scale-105"
+				class="group relative overflow-hidden rounded-full px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:shadow-xl"
 				style="background: linear-gradient(to right, var(--color-primary), var(--color-secondary));"
 			>
-				Try Free for 7 Days
+				<span class="relative z-10">Try Free for 7 Days</span>
+				<div
+					class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 group-hover:translate-x-full"
+				></div>
 			</a>
 			<a
 				href="/how-it-works"
-				class="rounded-full border px-8 py-3 text-lg font-semibold transition-colors hover:bg-[var(--color-bg-dark)] hover:text-white"
+				class="group relative overflow-hidden rounded-full border px-8 py-4 text-lg font-semibold transition-all duration-300 hover:bg-[var(--color-bg-dark)]"
 				style="border-color: var(--color-primary); color: var(--color-primary);"
 			>
-				See How It Works
+				<span class="relative z-10">See How It Works</span>
+				<div
+					class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-[var(--color-primary)]/10 to-transparent transition-transform duration-1000 group-hover:translate-x-full"
+				></div>
 			</a>
 		</div>
 	</section>
 
 	<!-- Problem/Solution Section -->
 	<section
-		class="flex w-full flex-col items-center px-4 py-16"
+		class="relative flex w-full flex-col items-center px-4 py-24"
 		style="background: var(--color-bg-dark);"
 	>
+		<div
+			class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-secondary)_0%,_transparent_70%)] opacity-10"
+		></div>
 		<h2
-			class="mb-4 text-center text-2xl font-semibold md:text-3xl"
+			class="mb-6 text-center text-3xl font-semibold md:text-4xl"
 			style="color: var(--color-secondary);"
 		>
 			Still scrambling to figure out who you're meeting?
 		</h2>
-		<p class="mb-2 text-center text-lg text-gray-300">Wasting time researching every attendee?</p>
-		<p class="text-center text-lg font-semibold text-white">
+		<p class="mb-4 text-center text-xl text-gray-300">Wasting time researching every attendee?</p>
+		<p class="text-center text-xl font-semibold text-white">
 			MeetingHero.AI automatically prepares you, delivering key insights directly to where you need
 			them.
 		</p>
@@ -62,186 +82,154 @@
 
 	<!-- Key Benefits Section -->
 	<section
-		class="flex w-full flex-col items-center px-4 py-16"
+		class="relative flex w-full flex-col items-center px-4 py-24"
 		style="background: var(--color-bg);"
 	>
+		<div
+			class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-primary)_0%,_transparent_70%)] opacity-10"
+		></div>
 		<h2
-			class="mb-8 text-center text-2xl font-semibold md:text-3xl"
+			class="mb-12 text-center text-3xl font-semibold md:text-4xl"
 			style="color: var(--color-primary);"
 		>
 			Key Benefits
 		</h2>
-		<div class="grid w-full max-w-5xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-			<div
-				class="flex flex-col items-center rounded-xl border p-6 shadow-md"
-				style="background: var(--color-bg-dark); border-color: var(--color-primary);"
-			>
-				<span class="mb-2 text-3xl">⏳</span>
-				<h3 class="mb-1 text-center text-lg font-bold">Save Time</h3>
-				<p class="text-center text-gray-300">Save hours of prep time weekly.</p>
-			</div>
-			<div
-				class="flex flex-col items-center rounded-xl border p-6 shadow-md"
-				style="background: var(--color-bg-dark); border-color: var(--color-secondary);"
-			>
-				<span class="mb-2 text-3xl">💡</span>
-				<h3 class="mb-1 text-center text-lg font-bold">Be Confident & Informed</h3>
-				<p class="text-center text-gray-300">Walk into every meeting confident and informed.</p>
-			</div>
-			<div
-				class="flex flex-col items-center rounded-xl border p-6 shadow-md"
-				style="background: var(--color-bg-dark); border-color: var(--color-accent);"
-			>
-				<span class="mb-2 text-3xl">🤝</span>
-				<h3 class="mb-1 text-center text-lg font-bold">Build Stronger Connections</h3>
-				<p class="text-center text-gray-300">
-					Have more personalized and productive conversations.
-				</p>
-			</div>
-			<div
-				class="flex flex-col items-center rounded-xl border p-6 shadow-md"
-				style="background: var(--color-bg-dark); border-color: var(--color-secondary);"
-			>
-				<span class="mb-2 text-3xl">⚡</span>
-				<h3 class="mb-1 text-center text-lg font-bold">Effortless Automation</h3>
-				<p class="text-center text-gray-300">Seamlessly plugs into your calendar.</p>
-			</div>
+		<div class="grid w-full max-w-6xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+			{#each [{ icon: '⏳', title: 'Save Time', desc: 'Save hours of prep time weekly.', color: 'var(--color-primary)' }, { icon: '💡', title: 'Be Confident & Informed', desc: 'Walk into every meeting confident and informed.', color: 'var(--color-secondary)' }, { icon: '🤝', title: 'Build Stronger Connections', desc: 'Have more personalized and productive conversations.', color: 'var(--color-accent)' }, { icon: '⚡', title: 'Effortless Automation', desc: 'Seamlessly plugs into your calendar.', color: 'var(--color-secondary)' }] as benefit}
+				<div
+					class="group relative flex flex-col items-center rounded-2xl border p-8 shadow-lg transition-all duration-300 hover:shadow-xl"
+					style="background: var(--color-bg-dark); border-color: {benefit.color};"
+				>
+					<span class="mb-4 text-4xl transition-transform duration-300 group-hover:scale-110"
+						>{benefit.icon}</span
+					>
+					<h3 class="mb-2 text-center text-xl font-bold">{benefit.title}</h3>
+					<p class="text-center text-gray-300">{benefit.desc}</p>
+					<div
+						class="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-transparent to-[{benefit.color}] opacity-0 transition-opacity duration-300 group-hover:opacity-10"
+					></div>
+				</div>
+			{/each}
 		</div>
 	</section>
 
 	<!-- How It Works Snapshot -->
 	<section
-		class="flex w-full flex-col items-center px-4 py-16"
+		class="relative flex w-full flex-col items-center px-4 py-24"
 		style="background: var(--color-bg-dark);"
 	>
+		<div
+			class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-secondary)_0%,_transparent_70%)] opacity-10"
+		></div>
 		<h2
-			class="mb-8 text-center text-2xl font-semibold md:text-3xl"
+			class="mb-12 text-center text-3xl font-semibold md:text-4xl"
 			style="color: var(--color-secondary);"
 		>
 			How It Works
 		</h2>
-		<div class="flex w-full max-w-4xl flex-col justify-center gap-8 md:flex-row">
-			<div class="flex flex-col items-center">
-				<span class="mb-2 text-4xl">📅</span>
-				<h3 class="mb-1 font-bold">Connect Your Calendar</h3>
-				<p class="text-center text-gray-300">
-					Google <span style="color: var(--color-primary);">•</span> Outlook
-				</p>
-			</div>
-			<div class="flex flex-col items-center">
-				<span class="mb-2 text-4xl">🤖</span>
-				<h3 class="mb-1 font-bold">AI Gathers Intel</h3>
-				<p class="text-center text-gray-300">Background, company, discussion points</p>
-			</div>
-			<div class="flex flex-col items-center">
-				<span class="mb-2 text-4xl">📬</span>
-				<h3 class="mb-1 font-bold">Get Your Prep Delivered</h3>
-				<p class="text-center text-gray-300">
-					Email <span style="color: var(--color-primary);">•</span> Calendar
-				</p>
-			</div>
+		<div class="flex w-full max-w-5xl flex-col justify-center gap-12 md:flex-row">
+			{#each [{ icon: '📅', title: 'Connect Your Calendar', desc: 'Google • Outlook' }, { icon: '🤖', title: 'AI Gathers Intel', desc: 'Background, company, discussion points' }, { icon: '📬', title: 'Get Your Prep Delivered', desc: 'Email • Calendar' }] as step}
+				<div class="group flex flex-col items-center">
+					<span class="mb-4 text-5xl transition-transform duration-300 group-hover:scale-110"
+						>{step.icon}</span
+					>
+					<h3 class="mb-2 text-xl font-bold">{step.title}</h3>
+					<p class="text-center text-gray-300">{step.desc}</p>
+				</div>
+			{/each}
 		</div>
 	</section>
 
 	<!-- Feature Highlights -->
 	<section
-		class="flex w-full flex-col items-center px-4 py-16"
+		class="relative flex w-full flex-col items-center px-4 py-24"
 		style="background: var(--color-bg);"
 	>
+		<div
+			class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-primary)_0%,_transparent_70%)] opacity-10"
+		></div>
 		<h2
-			class="mb-8 text-center text-2xl font-semibold md:text-3xl"
+			class="mb-12 text-center text-3xl font-semibold md:text-4xl"
 			style="color: var(--color-primary);"
 		>
 			Feature Highlights
 		</h2>
-		<div class="grid w-full max-w-5xl grid-cols-1 gap-8 md:grid-cols-3">
-			<div
-				class="flex flex-col items-center rounded-xl border p-6 shadow-md"
-				style="background: var(--color-bg-dark); border-color: var(--color-primary);"
-			>
-				<span class="mb-2 text-3xl">🧑‍💼</span>
-				<h3 class="mb-1 text-lg font-bold">Attendee Intel</h3>
-				<p class="text-center text-gray-300">
-					Get rich profiles and backgrounds on everyone you meet.
-				</p>
-			</div>
-			<div
-				class="flex flex-col items-center rounded-xl border p-6 shadow-md"
-				style="background: var(--color-bg-dark); border-color: var(--color-secondary);"
-			>
-				<span class="mb-2 text-3xl">🏢</span>
-				<h3 class="mb-1 text-lg font-bold">Company Deep Dives</h3>
-				<p class="text-center text-gray-300">Instantly understand company context and news.</p>
-			</div>
-			<div
-				class="flex flex-col items-center rounded-xl border p-6 shadow-md"
-				style="background: var(--color-bg-dark); border-color: var(--color-accent);"
-			>
-				<span class="mb-2 text-3xl">💬</span>
-				<h3 class="mb-1 text-lg font-bold">AI Discussion Starters</h3>
-				<p class="text-center text-gray-300">
-					Get smart, relevant talking points for every meeting.
-				</p>
-				<a
-					href="/features"
-					class="mt-2 underline hover:text-[var(--color-secondary)]"
-					style="color: var(--color-primary);">See all features →</a
+		<div class="grid w-full max-w-6xl grid-cols-1 gap-8 md:grid-cols-3">
+			{#each [{ icon: '🧑‍💼', title: 'Attendee Intel', desc: 'Get rich profiles and backgrounds on everyone you meet.', color: 'var(--color-primary)' }, { icon: '🏢', title: 'Company Deep Dives', desc: 'Instantly understand company context and news.', color: 'var(--color-secondary)' }, { icon: '💬', title: 'AI Discussion Starters', desc: 'Get smart, relevant talking points for every meeting.', color: 'var(--color-accent)' }] as feature}
+				<div
+					class="group relative flex flex-col items-center rounded-2xl border p-8 shadow-lg transition-all duration-300 hover:shadow-xl"
+					style="background: var(--color-bg-dark); border-color: {feature.color};"
 				>
-			</div>
+					<span class="mb-4 text-4xl transition-transform duration-300 group-hover:scale-110"
+						>{feature.icon}</span
+					>
+					<h3 class="mb-2 text-xl font-bold">{feature.title}</h3>
+					<p class="text-center text-gray-300">{feature.desc}</p>
+					<div
+						class="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-transparent to-[{feature.color}] opacity-0 transition-opacity duration-300 group-hover:opacity-10"
+					></div>
+				</div>
+			{/each}
 		</div>
+		<a
+			href="/features"
+			class="group mt-8 flex items-center gap-2 text-lg font-semibold transition-all duration-300"
+			style="color: var(--color-primary);"
+		>
+			See all features
+			<span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+		</a>
 	</section>
 
 	<!-- Social Proof -->
 	<section
-		class="flex w-full flex-col items-center px-4 py-16"
+		class="relative flex w-full flex-col items-center px-4 py-24"
 		style="background: var(--color-bg-dark);"
 	>
+		<div
+			class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-secondary)_0%,_transparent_70%)] opacity-10"
+		></div>
 		<h2
-			class="mb-8 text-center text-2xl font-semibold md:text-3xl"
+			class="mb-12 text-center text-3xl font-semibold md:text-4xl"
 			style="color: var(--color-secondary);"
 		>
 			Trusted by Many
 		</h2>
-		<div class="mb-8 flex flex-wrap items-center justify-center gap-8">
-			<!-- Placeholder logos -->
-			<div
-				class="flex h-12 w-32 items-center justify-center rounded-lg font-bold"
-				style="background: var(--color-bg-dark); color: var(--color-primary); border: 1px solid var(--color-primary);"
-			>
-				Logo 1
-			</div>
-			<div
-				class="flex h-12 w-32 items-center justify-center rounded-lg font-bold"
-				style="background: var(--color-bg-dark); color: var(--color-secondary); border: 1px solid var(--color-secondary);"
-			>
-				Logo 2
-			</div>
-			<div
-				class="flex h-12 w-32 items-center justify-center rounded-lg font-bold"
-				style="background: var(--color-bg-dark); color: var(--color-accent); border: 1px solid var(--color-accent);"
-			>
-				Logo 3
-			</div>
+		<div class="mb-12 flex flex-wrap items-center justify-center gap-8">
+			{#each [1, 2, 3] as i}
+				<div
+					class="group flex h-16 w-40 items-center justify-center rounded-xl border font-bold transition-all duration-300 hover:shadow-lg"
+					style="background: var(--color-bg-dark); color: var(--color-primary); border-color: var(--color-primary);"
+				>
+					Logo {i}
+				</div>
+			{/each}
 		</div>
 		<div class="mx-auto max-w-2xl text-center">
-			<blockquote class="mb-2 text-gray-300 italic">
-				“MeetingHero.AI made me feel prepared for every call. Huge time saver!”
+			<blockquote class="mb-4 text-xl text-gray-300 italic">
+				"MeetingHero.AI made me feel prepared for every call. Huge time saver!"
 			</blockquote>
-			<span class="font-semibold" style="color: var(--color-primary);">— Beta Tester</span>
+			<span class="text-lg font-semibold" style="color: var(--color-primary);">— Beta Tester</span>
 		</div>
 	</section>
 
 	<!-- Secondary CTA -->
 	<section
-		class="flex w-full flex-col items-center px-4 py-12"
+		class="relative flex w-full flex-col items-center px-4 py-24"
 		style="background: linear-gradient(to top, var(--color-bg), var(--color-bg-dark));"
 	>
+		<div
+			class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-primary)_0%,_transparent_70%)] opacity-10"
+		></div>
 		<a
 			href="https://app.meetinghero.ai/"
-			class="rounded-full px-12 py-4 text-xl font-bold text-white shadow-lg transition-transform hover:scale-105"
+			class="group relative overflow-hidden rounded-full px-12 py-4 text-xl font-bold text-white shadow-lg transition-all duration-300 hover:shadow-xl"
 			style="background: linear-gradient(to right, var(--color-primary), var(--color-secondary));"
 		>
-			Try Free for 7 Days
+			<span class="relative z-10">Try Free for 7 Days</span>
+			<div
+				class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 group-hover:translate-x-full"
+			></div>
 		</a>
 	</section>
 </div>

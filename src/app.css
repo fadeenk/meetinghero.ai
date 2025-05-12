@@ -14,3 +14,7 @@
 	--color-info: #3268ff;
 	--color-warning: #ff9610;
 }
+
+body {
+	background-color: var(--color-bg);
+}

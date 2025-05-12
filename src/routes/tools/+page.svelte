@@ -5,11 +5,14 @@
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
 	<!-- Headline -->
 	<section
-		class="flex w-full flex-col items-center justify-center px-4 py-16"
+		class="relative flex w-full flex-col items-center justify-center overflow-hidden px-4 py-24"
 		style="background: var(--color-bg-dark);"
 	>
+		<div
+			class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-primary)_0%,_transparent_70%)] opacity-10"
+		></div>
 		<h1
-			class="mb-4 text-center text-4xl font-bold md:text-5xl"
+			class="mb-6 text-center text-4xl leading-tight font-bold md:text-6xl"
 			style="color: var(--color-primary);"
 		>
 			Free Meeting Tools & Resources
@@ -20,183 +23,76 @@
 	</section>
 
 	<!-- Tools Grid -->
-	<section class="mx-auto w-full max-w-7xl px-4 py-12">
-		<div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-			<!-- Meeting Decision Framework -->
-			<div
-				class="flex flex-col rounded-xl border p-6 shadow-lg"
-				style="background: var(--color-bg-dark); border-color: var(--color-primary);"
-			>
-				<h2 class="mb-2 text-xl font-bold" style="color: var(--color-primary);">
-					Should This Be A Meeting?
-				</h2>
-				<p class="mb-4 text-gray-300">
-					Use our framework to determine if a meeting is necessary or if it can be handled
-					asynchronously.
-				</p>
-				<ul class="mb-4 list-disc pl-6 text-gray-400">
-					<li>Interactive decision flowchart</li>
-					<li>Email templates for responses</li>
-					<li>Best practices guide</li>
-				</ul>
-				<a
-					href="/tools/should-this-be-a-meeting"
-					class="mt-auto rounded-full border px-4 py-2 text-center text-sm font-semibold transition-colors hover:bg-[var(--color-primary)] hover:text-white"
-					style="border-color: var(--color-primary); color: var(--color-primary);"
+	<section class="relative mx-auto w-full max-w-7xl px-4 py-24">
+		<div
+			class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-primary)_0%,_transparent_70%)] opacity-5"
+		></div>
+		<div class="relative z-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+			{#each [{ title: 'Should This Be A Meeting?', color: 'var(--color-primary)', description: 'Use our framework to determine if a meeting is necessary or if it can be handled asynchronously.', features: ['Interactive decision flowchart', 'Email templates for responses', 'Best practices guide'], link: '/tools/should-this-be-a-meeting', linkText: 'Try Interactive Tool' }, { title: 'Meeting Notes Template', color: 'var(--color-secondary)', description: 'Standardized templates for capturing meeting notes and action items effectively.', features: ['Agenda structure', 'Attendee tracking', 'Action item format'], link: '#', linkText: 'Get Templates' }, { title: 'Action Item Tracker', color: 'var(--color-accent)', description: 'Simple templates and guides for tracking meeting action items and follow-ups.', features: ['Task tracking template', 'Due date management', 'Status updates'], link: '#', linkText: 'Download Tracker' }, { title: 'Meeting Agenda Templates', color: 'var(--color-primary)', description: 'Pre-designed templates for different types of meetings and best practices guide.', features: ['Sales discovery calls', 'Project check-ins', 'Partnership meetings'], link: '#', linkText: 'Get Templates' }, { title: 'Contact Management Guide', color: 'var(--color-secondary)', description: 'Simple templates and guides for managing meeting contacts and relationships.', features: ['Contact sheet template', 'CRM integration guide', 'Follow-up templates'], link: '#', linkText: 'Download Guide' }, { title: 'Meeting Cost Calculator', color: 'var(--color-accent)', description: 'Calculate the real cost of your meetings and understand the ROI of better meeting practices.', features: ['Interactive calculator', 'Cost breakdown', 'ROI analysis'], link: '#', linkText: 'Try Calculator' }] as tool}
+				<div
+					class="group relative flex flex-col rounded-2xl border bg-[var(--color-bg-dark)] p-8 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+					style="border-color: {tool.color};"
 				>
-					Try Interactive Tool
-				</a>
-			</div>
-
-			<!-- Meeting Notes Template -->
-			<div
-				class="flex flex-col rounded-xl border p-6 shadow-lg"
-				style="background: var(--color-bg-dark); border-color: var(--color-secondary);"
-			>
-				<h2 class="mb-2 text-xl font-bold" style="color: var(--color-secondary);">
-					Meeting Notes Template
-				</h2>
-				<p class="mb-4 text-gray-300">
-					Standardized templates for capturing meeting notes and action items effectively.
-				</p>
-				<ul class="mb-4 list-disc pl-6 text-gray-400">
-					<li>Agenda structure</li>
-					<li>Attendee tracking</li>
-					<li>Action item format</li>
-				</ul>
-				<a
-					href="#"
-					class="mt-auto rounded-full border px-4 py-2 text-center text-sm font-semibold transition-colors hover:bg-[var(--color-secondary)] hover:text-white"
-					style="border-color: var(--color-secondary); color: var(--color-secondary);"
-				>
-					Get Templates
-				</a>
-			</div>
-
-			<!-- Action Item Tracker -->
-			<div
-				class="flex flex-col rounded-xl border p-6 shadow-lg"
-				style="background: var(--color-bg-dark); border-color: var(--color-accent);"
-			>
-				<h2 class="mb-2 text-xl font-bold" style="color: var(--color-accent);">
-					Action Item Tracker
-				</h2>
-				<p class="mb-4 text-gray-300">
-					Simple templates and guides for tracking meeting action items and follow-ups.
-				</p>
-				<ul class="mb-4 list-disc pl-6 text-gray-400">
-					<li>Task tracking template</li>
-					<li>Due date management</li>
-					<li>Status updates</li>
-				</ul>
-				<a
-					href="#"
-					class="mt-auto rounded-full border px-4 py-2 text-center text-sm font-semibold transition-colors hover:bg-[var(--color-accent)] hover:text-white"
-					style="border-color: var(--color-accent); color: var(--color-accent);"
-				>
-					Download Tracker
-				</a>
-			</div>
-
-			<!-- Meeting Agenda Templates -->
-			<div
-				class="flex flex-col rounded-xl border p-6 shadow-lg"
-				style="background: var(--color-bg-dark); border-color: var(--color-primary);"
-			>
-				<h2 class="mb-2 text-xl font-bold" style="color: var(--color-primary);">
-					Meeting Agenda Templates
-				</h2>
-				<p class="mb-4 text-gray-300">
-					Pre-designed templates for different types of meetings and best practices guide.
-				</p>
-				<ul class="mb-4 list-disc pl-6 text-gray-400">
-					<li>Sales discovery calls</li>
-					<li>Project check-ins</li>
-					<li>Partnership meetings</li>
-				</ul>
-				<a
-					href="#"
-					class="mt-auto rounded-full border px-4 py-2 text-center text-sm font-semibold transition-colors hover:bg-[var(--color-primary)] hover:text-white"
-					style="border-color: var(--color-primary); color: var(--color-primary);"
-				>
-					Get Templates
-				</a>
-			</div>
-
-			<!-- Contact Management -->
-			<div
-				class="flex flex-col rounded-xl border p-6 shadow-lg"
-				style="background: var(--color-bg-dark); border-color: var(--color-secondary);"
-			>
-				<h2 class="mb-2 text-xl font-bold" style="color: var(--color-secondary);">
-					Contact Management Guide
-				</h2>
-				<p class="mb-4 text-gray-300">
-					Simple templates and guides for managing meeting contacts and relationships.
-				</p>
-				<ul class="mb-4 list-disc pl-6 text-gray-400">
-					<li>Contact sheet template</li>
-					<li>CRM integration guide</li>
-					<li>Follow-up templates</li>
-				</ul>
-				<a
-					href="#"
-					class="mt-auto rounded-full border px-4 py-2 text-center text-sm font-semibold transition-colors hover:bg-[var(--color-secondary)] hover:text-white"
-					style="border-color: var(--color-secondary); color: var(--color-secondary);"
-				>
-					Download Guide
-				</a>
-			</div>
-
-			<!-- Meeting Cost Calculator -->
-			<div
-				class="flex flex-col rounded-xl border p-6 shadow-lg"
-				style="background: var(--color-bg-dark); border-color: var(--color-accent);"
-			>
-				<h2 class="mb-2 text-xl font-bold" style="color: var(--color-accent);">
-					Meeting Cost Calculator
-				</h2>
-				<p class="mb-4 text-gray-300">
-					Calculate the real cost of your meetings and understand the ROI of better meeting
-					practices.
-				</p>
-				<ul class="mb-4 list-disc pl-6 text-gray-400">
-					<li>Interactive calculator</li>
-					<li>Cost breakdown</li>
-					<li>ROI analysis</li>
-				</ul>
-				<a
-					href="#"
-					class="mt-auto rounded-full border px-4 py-2 text-center text-sm font-semibold transition-colors hover:bg-[var(--color-accent)] hover:text-white"
-					style="border-color: var(--color-accent); color: var(--color-accent);"
-				>
-					Try Calculator
-				</a>
-			</div>
+					<div
+						class="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-transparent to-[{tool.color}] opacity-0 transition-opacity duration-300 group-hover:opacity-5"
+					></div>
+					<h2 class="mb-4 text-2xl font-bold" style="color: {tool.color};">
+						{tool.title}
+					</h2>
+					<p class="mb-6 text-gray-300">
+						{tool.description}
+					</p>
+					<ul class="mb-6 space-y-3 text-gray-400">
+						{#each tool.features as feature}
+							<li class="flex items-center">
+								<span class="mr-2 text-[var(--color-positive)]">•</span>
+								{feature}
+							</li>
+						{/each}
+					</ul>
+					<a
+						href={tool.link}
+						class="group relative mt-auto inline-block rounded-full border px-6 py-3 text-center text-base font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+						style="border-color: {tool.color}; color: {tool.color};"
+					>
+						{tool.linkText}
+						<span
+							class="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-[{tool.color}] to-[{tool.color}] opacity-0 transition-opacity duration-300 group-hover:opacity-10"
+						></span>
+					</a>
+				</div>
+			{/each}
 		</div>
 	</section>
 
 	<!-- CTA Section -->
 	<section
-		class="flex w-full flex-col items-center justify-center px-4 py-16"
+		class="relative flex w-full flex-col items-center justify-center overflow-hidden px-4 py-24"
 		style="background: var(--color-bg-dark);"
 	>
-		<h2
-			class="mb-4 text-center text-2xl font-semibold md:text-3xl"
-			style="color: var(--color-primary);"
-		>
-			Ready to Make Your Meetings More Productive?
-		</h2>
-		<p class="mb-8 max-w-2xl text-center text-lg text-gray-300">
-			Combine these tools with MeetingHero.AI's powerful meeting preparation features for maximum
-			effectiveness.
-		</p>
-		<a
-			href="https://app.meetinghero.ai/"
-			class="rounded-full px-10 py-4 text-lg font-bold text-white shadow-lg transition-transform hover:scale-105"
-			style="background: linear-gradient(to right, var(--color-primary), var(--color-secondary));"
-		>
-			Try MeetingHero.AI Free
-		</a>
+		<div
+			class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-primary)_0%,_transparent_70%)] opacity-10"
+		></div>
+		<div class="relative z-10 text-center">
+			<h2
+				class="mb-6 text-center text-3xl font-semibold md:text-4xl"
+				style="color: var(--color-primary);"
+			>
+				Ready to Make Your Meetings More Productive?
+			</h2>
+			<p class="mb-8 max-w-2xl text-center text-xl text-gray-300">
+				Combine these tools with MeetingHero.AI's powerful meeting preparation features for maximum
+				effectiveness.
+			</p>
+			<a
+				href="/signup"
+				class="group relative inline-block rounded-full bg-[var(--color-primary)] px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
+			>
+				Try MeetingHero.AI Free
+				<span
+					class="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+				></span>
+			</a>
+		</div>
 	</section>
 </div>
