@@ -3,8 +3,17 @@
 
 	const tools = [
 		{
-			title: 'Should This Be A Meeting?',
+			title: 'Meeting Cost Calculator',
 			color: 'var(--color-primary)',
+			description:
+				'Calculate the real cost of your meetings and understand the ROI of better meeting practices.',
+			features: ['Interactive calculator', 'Cost breakdown', 'ROI analysis'],
+			link: base + '/tools/meeting-cost-calculator',
+			linkText: 'Try Calculator'
+		},
+		{
+			title: 'Should This Be A Meeting?',
+			color: 'var(--color-secondary)',
 			description:
 				'Use our framework to determine if a meeting is necessary or if it can be handled asynchronously.',
 			features: [
@@ -16,8 +25,8 @@
 			linkText: 'Try Interactive Tool'
 		},
 		{
-			title: 'Meeting Notes Template',
-			color: 'var(--color-secondary)',
+			title: 'Meeting Notes Generator',
+			color: 'var(--color-accent)',
 			description:
 				'Interactive tool to create professional meeting notes with our standardized template.',
 			features: ['Agenda structure', 'Attendee tracking', 'Action item format'],
@@ -26,7 +35,7 @@
 		},
 		{
 			title: 'Action Item Tracker',
-			color: 'var(--color-accent)',
+			color: 'var(--color-primary)',
 			description: 'Simple templates and guides for tracking meeting action items and follow-ups.',
 			features: ['Task tracking template', 'Due date management', 'Status updates'],
 			link: base + '/tools/action-item-tracker',
@@ -34,7 +43,7 @@
 		},
 		{
 			title: 'Meeting Agenda Templates',
-			color: 'var(--color-primary)',
+			color: 'var(--color-secondary)',
 			description:
 				'Pre-designed templates for different types of meetings and best practices guide.',
 			features: ['Sales discovery calls', 'Project check-ins', 'Partnership meetings'],
@@ -43,20 +52,11 @@
 		},
 		{
 			title: 'Contact Management Guide',
-			color: 'var(--color-secondary)',
+			color: 'var(--color-accent)',
 			description: 'Simple templates and guides for managing meeting contacts and relationships.',
 			features: ['Contact sheet template', 'CRM integration guide', 'Follow-up templates'],
 			link: '#',
 			linkText: 'Download Guide'
-		},
-		{
-			title: 'Meeting Cost Calculator',
-			color: 'var(--color-accent)',
-			description:
-				'Calculate the real cost of your meetings and understand the ROI of better meeting practices.',
-			features: ['Interactive calculator', 'Cost breakdown', 'ROI analysis'],
-			link: '#',
-			linkText: 'Try Calculator'
 		}
 	];
 </script>
