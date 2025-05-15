@@ -91,8 +91,8 @@
 		<div
 			class="relative z-10 flex w-full max-w-xl flex-col items-center rounded-2xl bg-[var(--color-bg-dark)] p-8 shadow-lg transition-all duration-300 hover:shadow-xl"
 		>
-			<h2 class="mb-4 text-2xl font-bold" style="color: var(--color-primary);">
-				Try MeetingHero.AI Completely Free for 7 Days
+			<h2 class="mb-4 text-center text-2xl font-bold" style="color: var(--color-primary);">
+				Try MeetingHero.AI<br />Completely Free for 7 Days
 			</h2>
 			<p class="mb-6 text-lg" style="color: var(--color-positive);">
 				No Credit Card Required to Start.
