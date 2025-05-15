@@ -6,14 +6,14 @@
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
 	<!-- Hero Section -->
 	<section
-		class="relative flex w-full flex-col items-center justify-center overflow-hidden px-4 py-24"
+		class="relative flex w-full flex-col items-center justify-center overflow-hidden px-4 py-16"
 		style="background: linear-gradient(to bottom, var(--color-bg), var(--color-bg-dark), var(--color-bg));"
 	>
 		<div
 			class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-primary)_0%,_transparent_70%)] opacity-10"
 		></div>
 		<h1
-			class="mb-6 text-center text-4xl leading-tight font-bold drop-shadow-lg md:text-7xl"
+			class="mb-4 text-center text-4xl leading-tight font-bold drop-shadow-lg md:text-7xl"
 			style="color: var(--color-primary);"
 		>
 			Stop Scrambling,<br />
@@ -23,12 +23,12 @@
 				Start Your Meeting Prepared
 			</span>
 		</h1>
-		<p class="mb-12 max-w-2xl text-center text-lg text-gray-200 md:text-2xl">
+		<p class="mb-8 max-w-2xl text-center text-lg text-gray-200 md:text-2xl">
 			Get Automated Intel on Attendees and Companies Before Every Meeting
 		</p>
 		<!-- Visual Placeholder -->
 		<div
-			class="group relative mb-12 w-full max-w-2xl overflow-hidden rounded-2xl border shadow-xl transition-all duration-300 hover:shadow-2xl"
+			class="group relative mb-8 w-full max-w-2xl overflow-hidden rounded-2xl border shadow-xl transition-all duration-300 hover:shadow-2xl"
 			style="background: var(--color-bg-dark); border-color: var(--color-primary); aspect-ratio: 16/9;"
 		>
 			<div class="absolute inset-0 z-10">
