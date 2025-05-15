@@ -28,13 +28,19 @@
 		</p>
 		<!-- Visual Placeholder -->
 		<div
-			class="group mb-12 flex h-64 w-full max-w-2xl items-center justify-center rounded-2xl border shadow-xl transition-all duration-300 hover:shadow-2xl"
-			style="background: var(--color-bg-dark); border-color: var(--color-primary);"
+			class="group relative mb-12 w-full max-w-2xl overflow-hidden rounded-2xl border shadow-xl transition-all duration-300 hover:shadow-2xl"
+			style="background: var(--color-bg-dark); border-color: var(--color-primary); aspect-ratio: 16/9;"
 		>
-			<span
-				class="text-xl transition-transform duration-300 group-hover:scale-105"
-				style="color: var(--color-secondary);">[Demo Video or Image Here]</span
-			>
+			<div class="absolute inset-0 z-10">
+				<iframe
+					class="h-full w-full"
+					src="https://www.youtube.com/embed/IDNpZuoeIOU"
+					title="MeetingHero.AI Demo"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen
+				></iframe>
+			</div>
 		</div>
 		<div class="flex flex-col gap-4 md:flex-row">
 			<a
@@ -198,7 +204,7 @@
 		>
 			Trusted by Many
 		</h2>
-		<div class="mb-12 flex flex-wrap items-center justify-center gap-8">
+		<!-- <div class="mb-12 flex flex-wrap items-center justify-center gap-8">
 			{#each [1, 2, 3] as i}
 				<div
 					class="group flex h-16 w-40 items-center justify-center rounded-xl border font-bold transition-all duration-300 hover:shadow-lg"
@@ -207,12 +213,13 @@
 					Logo {i}
 				</div>
 			{/each}
-		</div>
+		</div> -->
 		<div class="mx-auto max-w-2xl text-center">
 			<blockquote class="mb-4 text-xl text-gray-300 italic">
 				"MeetingHero.AI made me feel prepared for every call. Huge time saver!"
 			</blockquote>
-			<span class="text-lg font-semibold" style="color: var(--color-primary);">— Beta Tester</span>
+			<span class="text-lg font-semibold" style="color: var(--color-primary);">— Luke Sophinos</span
+			>
 		</div>
 	</section>
 
