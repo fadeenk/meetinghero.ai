@@ -5,9 +5,6 @@ const config = {
 	preprocess: vitePreprocess(),
 	kit: {
 		adapter: adapter({ fallback: 'index.html' }),
-		paths: {
-			base: process.argv.includes('dev') ? '' : '/meetinghero.ai'
-		},
 		appDir: 'app',
 		prerender: {
 			handleHttpError: 'warn'
