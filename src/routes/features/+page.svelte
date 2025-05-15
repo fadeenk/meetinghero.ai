@@ -1,5 +1,117 @@
-<script>
-	// Placeholder for future interactivity or image imports
+<script lang="ts">
+	import ai from './ai.png';
+	import intel from './intel.png';
+	import company from './company.png';
+	import calendar from './calendar.png';
+	import flexDelivery from './flex-delivery.png';
+	import delivery from './delivery.png';
+	import dashboard from './dashboard.png';
+	import database from './database.png';
+
+	let selectedImage: string | null = null;
+
+	function openFullScreen(image: string): void {
+		selectedImage = image;
+	}
+
+	function closeFullScreen(): void {
+		selectedImage = null;
+	}
+
+	const features = [
+		{
+			icon: '💬',
+			image: ai,
+			title: 'AI Discussion Starters',
+			color: 'var(--color-primary)',
+			description: 'Get smart, relevant talking points for every meeting.',
+			features: ['Personalized topics', 'Industry insights', 'Recent developments'],
+			benefit: 'Never struggle to find conversation topics again',
+			reverse: false
+		},
+		{
+			icon: '🧑‍💼',
+			image: intel,
+			title: 'Attendee Intel',
+			color: 'var(--color-secondary)',
+			description: 'Get rich profiles and backgrounds on everyone you meet.',
+			features: ['Background', 'Location', 'Other details'],
+			benefit: "Walk into meetings knowing exactly who you're talking to",
+			reverse: true
+		},
+		{
+			icon: '🏢',
+			image: company,
+			title: 'Company Deep Dives',
+			color: 'var(--color-accent)',
+			description: 'Instantly understand company context and news.',
+			features: ['Company overview', 'Recent news', 'Financial insights'],
+			benefit: 'Understand the business context without hours of research',
+			reverse: false
+		},
+		{
+			icon: '📅',
+			image: calendar,
+			title: 'Seamless Calendar Integration',
+			color: 'var(--color-primary)',
+			description: 'Works with Google & Outlook—no new tools to learn.',
+			features: [],
+			benefit: 'Works with your existing workflow.',
+			reverse: true
+		},
+		{
+			icon: '📬',
+			image: flexDelivery,
+			title: 'Flexible Delivery Options',
+			color: 'var(--color-secondary)',
+			description: 'Get your prep via email, calendar invite, or dashboard—your choice.',
+			features: ['Email', 'Calendar Invite', 'Dashboard Access'],
+			benefit: 'Get the information how and when you prefer.',
+			reverse: false
+		},
+		{
+			icon: '⚙️',
+			image: delivery,
+			title: 'Customizable Delivery Settings',
+			color: 'var(--color-accent)',
+			description: 'Choose who you get prep for and when:',
+			features: [
+				'Only people not met before',
+				'People not met within X days',
+				'Everyone',
+				'Exclude domains (e.g., internal emails)'
+			],
+			benefit: 'Tailor the service to your specific needs and privacy preferences.',
+			reverse: true
+		},
+		{
+			icon: '📊',
+			image: dashboard,
+			title: 'Analytics Dashboard',
+			color: 'var(--color-primary)',
+			description: 'Visualize your meeting activity and the value MeetingHero.AI provides:',
+			features: [
+				'Meetings Count',
+				'Time in Meetings',
+				'Prep Time Saved',
+				'Profiles Pulled',
+				'Meeting Distribution by Day',
+				'Meeting Duration Breakdown'
+			],
+			benefit: 'Visualize your meeting activity and the value MH.AI provides.',
+			reverse: false
+		},
+		{
+			icon: '🔍',
+			image: database,
+			title: 'Searchable Profile Database',
+			color: 'var(--color-secondary)',
+			description: 'Profiles are saved and searchable in your dashboard.',
+			features: [],
+			benefit: 'Build a personal CRM of meeting contacts and their background.',
+			reverse: true
+		}
+	];
 </script>
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
@@ -24,7 +136,7 @@
 	</section>
 
 	<!-- Feature Sections -->
-	{#each [{ icon: '🧑‍💼', title: 'Attendee Intel', color: 'var(--color-primary)', description: 'Get rich profiles and backgrounds on everyone you meet.', features: ['Professional background', 'Recent activity', 'Shared connections'], benefit: "Walk into meetings knowing exactly who you're talking to", reverse: false }, { icon: '🏢', title: 'Company Deep Dives', color: 'var(--color-secondary)', description: 'Instantly understand company context and news.', features: ['Company overview', 'Recent news', 'Financial insights'], benefit: 'Understand the business context without hours of research', reverse: true }, { icon: '💬', title: 'AI Discussion Starters', color: 'var(--color-accent)', description: 'Get smart, relevant talking points for every meeting.', features: ['Personalized topics', 'Industry insights', 'Recent developments'], benefit: 'Never struggle to find conversation topics again', reverse: false }, { icon: '📅', title: 'Seamless Calendar Integration', color: 'var(--color-primary)', description: 'Works with Google & Outlook—no new tools to learn.', features: [], benefit: 'Works with your existing workflow.', reverse: true }, { icon: '📬', title: 'Flexible Delivery Options', color: 'var(--color-secondary)', description: 'Get your prep via email, calendar invite, or dashboard—your choice.', features: ['Email', 'Calendar Invite', 'Dashboard Access'], benefit: 'Get the information how and when you prefer.', reverse: false }, { icon: '⚙️', title: 'Customizable Delivery Settings', color: 'var(--color-accent)', description: 'Choose who you get prep for and when:', features: ['Only people not met before', 'People not met within X days', 'Everyone', 'Exclude domains (e.g., internal emails)'], benefit: 'Tailor the service to your specific needs and privacy preferences.', reverse: true }, { icon: '📊', title: 'Analytics Dashboard', color: 'var(--color-primary)', description: 'Visualize your meeting activity and the value MeetingHero.AI provides:', features: ['Meetings Count', 'Time in Meetings', 'Prep Time Saved', 'Profiles Pulled', 'Meeting Distribution by Day', 'Meeting Duration Breakdown'], benefit: 'Visualize your meeting activity and the value MH.AI provides.', reverse: false }, { icon: '🔍', title: 'Searchable Profile Database', color: 'var(--color-secondary)', description: 'Profiles are saved and searchable in your dashboard.', features: [], benefit: 'Build a personal CRM of meeting contacts and their background.', reverse: true }] as feature, i}
+	{#each features as feature, i}
 		<section
 			class="relative flex w-full flex-col items-center px-4 py-24"
 			style="background: {i % 2 === 0 ? 'var(--color-bg)' : 'var(--color-bg-dark)'};"
@@ -59,17 +171,63 @@
 				</div>
 				<div class="flex flex-1 justify-center">
 					<div
-						class="group flex h-48 w-64 items-center justify-center rounded-2xl border-2 bg-[var(--color-bg-dark)] text-5xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
-						style="border-color: {feature.color}; color: {feature.color};"
+						class="group flex h-64 w-80 cursor-pointer items-center justify-center overflow-hidden rounded-2xl border-2 bg-[var(--color-bg-dark)] shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+						style="border-color: {feature.color};"
+						onclick={() => openFullScreen(feature.image)}
+						onkeydown={(e) => e.key === 'Enter' && openFullScreen(feature.image)}
+						role="button"
+						tabindex="0"
+						aria-label="View {feature.title} in full screen"
 					>
-						<span class="transform transition-transform duration-300 group-hover:scale-110"
-							>{feature.icon}</span
-						>
+						<img
+							src={feature.image}
+							alt={feature.title}
+							class="h-full w-full transform object-contain transition-transform duration-300 group-hover:scale-110"
+						/>
 					</div>
 				</div>
 			</div>
 		</section>
 	{/each}
+
+	<!-- Full Screen Modal -->
+	{#if selectedImage}
+		<div
+			class="bg-opacity-90 fixed inset-0 z-50 flex items-center justify-center bg-black"
+			onclick={closeFullScreen}
+			onkeydown={(e) => e.key === 'Escape' && closeFullScreen()}
+			role="button"
+			tabindex="0"
+		>
+			<div class="relative max-h-[90vh] max-w-[90vw]">
+				<img
+					src={selectedImage}
+					alt="Full screen view"
+					class="max-h-[90vh] max-w-[90vw] object-contain"
+				/>
+				<button
+					class="absolute -top-4 -right-4 rounded-full bg-white p-2 text-black hover:bg-gray-200"
+					onclick={closeFullScreen}
+					aria-label="Close full screen view"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-6 w-6"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M6 18L18 6M6 6l12 12"
+						/>
+					</svg>
+				</button>
+			</div>
+		</div>
+	{/if}
 
 	<!-- CTA -->
 	<section
