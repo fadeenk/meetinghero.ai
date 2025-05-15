@@ -29,8 +29,8 @@
 			color: 'var(--color-accent)',
 			description: 'Simple templates and guides for tracking meeting action items and follow-ups.',
 			features: ['Task tracking template', 'Due date management', 'Status updates'],
-			link: '#',
-			linkText: 'Download Tracker'
+			link: base + '/tools/action-item-tracker',
+			linkText: 'Try Interactive Tool'
 		},
 		{
 			title: 'Meeting Agenda Templates',

@@ -334,8 +334,11 @@
 					Basic Information
 				</h2>
 				<div class="mb-4">
-					<label class="mb-2 block text-sm font-medium text-gray-300">Meeting Title</label>
+					<label for="meeting-title" class="mb-2 block text-sm font-medium text-gray-300"
+						>Meeting Title</label
+					>
 					<input
+						id="meeting-title"
 						type="text"
 						bind:value={meetingTitle}
 						class="w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white"
@@ -344,32 +347,44 @@
 				</div>
 				<div class="grid gap-4 md:grid-cols-2">
 					<div>
-						<label class="mb-2 block text-sm font-medium text-gray-300">Start Time</label>
+						<label for="start-time" class="mb-2 block text-sm font-medium text-gray-300"
+							>Start Time</label
+						>
 						<input
+							id="start-time"
 							type="time"
 							bind:value={startTime}
 							class="w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white"
 						/>
 					</div>
 					<div>
-						<label class="mb-2 block text-sm font-medium text-gray-300">End Time</label>
+						<label for="end-time" class="mb-2 block text-sm font-medium text-gray-300"
+							>End Time</label
+						>
 						<input
+							id="end-time"
 							type="time"
 							bind:value={endTime}
 							class="w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white"
 						/>
 					</div>
 					<div>
-						<label class="mb-2 block text-sm font-medium text-gray-300">Meeting Date</label>
+						<label for="meeting-date" class="mb-2 block text-sm font-medium text-gray-300"
+							>Meeting Date</label
+						>
 						<input
+							id="meeting-date"
 							type="date"
 							bind:value={meetingDate}
 							class="w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white"
 						/>
 					</div>
 					<div>
-						<label class="mb-2 block text-sm font-medium text-gray-300">Location/Method</label>
+						<label for="location" class="mb-2 block text-sm font-medium text-gray-300"
+							>Location/Method</label
+						>
 						<input
+							id="location"
 							type="text"
 							bind:value={location}
 							class="w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white"
@@ -378,8 +393,11 @@
 					</div>
 				</div>
 				<div class="mt-4">
-					<label class="mb-2 block text-sm font-medium text-gray-300">Meeting Goal/Purpose</label>
+					<label for="meeting-goal" class="mb-2 block text-sm font-medium text-gray-300"
+						>Meeting Goal/Purpose</label
+					>
 					<textarea
+						id="meeting-goal"
 						bind:value={meetingGoal}
 						class="w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white"
 						placeholder="Briefly state the objective"
@@ -411,6 +429,7 @@
 							<button
 								class="rounded-full bg-red-500 p-2 text-white transition-colors hover:bg-red-600"
 								onclick={() => removeAttendee(attendee.id)}
+								aria-label="Remove attendee"
 							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -453,6 +472,7 @@
 							<button
 								class="rounded-full bg-red-500 p-2 text-white transition-colors hover:bg-red-600"
 								onclick={() => removeAbsentee(absentee.id)}
+								aria-label="Remove absentee"
 							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -496,6 +516,7 @@
 								<button
 									class="rounded-full bg-red-500 p-2 text-white transition-colors hover:bg-red-600"
 									onclick={() => removeAgendaItem(item.id)}
+									aria-label="Remove agenda item"
 								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -523,6 +544,7 @@
 										<button
 											class="rounded-full bg-red-500 p-2 text-white transition-colors hover:bg-red-600"
 											onclick={() => removeSubPoint(item.id, index)}
+											aria-label="Remove sub-point"
 										>
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
@@ -575,6 +597,7 @@
 								<button
 									class="rounded-full bg-red-500 p-2 text-white transition-colors hover:bg-red-600"
 									onclick={() => removeDiscussionPoint(point.id)}
+									aria-label="Remove discussion point"
 								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -602,6 +625,7 @@
 										<button
 											class="rounded-full bg-red-500 p-2 text-white transition-colors hover:bg-red-600"
 											onclick={() => removeDiscussionSubPoint(point.id, index)}
+											aria-label="Remove discussion sub-point"
 										>
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
@@ -672,6 +696,7 @@
 									<button
 										class="rounded-full bg-red-500 p-2 text-white transition-colors hover:bg-red-600"
 										onclick={() => removeActionItem(item.id)}
+										aria-label="Remove action item"
 									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -716,6 +741,7 @@
 							<button
 								class="rounded-full bg-red-500 p-2 text-white transition-colors hover:bg-red-600"
 								onclick={() => removeNextStep(step.id)}
+								aria-label="Remove next step"
 							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -738,8 +764,11 @@
 			<!-- Note Taker and Distribution Date -->
 			<div class="mb-8 grid gap-4 md:grid-cols-2">
 				<div>
-					<label class="mb-2 block text-sm font-medium text-gray-300">Note Taker</label>
+					<label for="note-taker" class="mb-2 block text-sm font-medium text-gray-300"
+						>Note Taker</label
+					>
 					<input
+						id="note-taker"
 						type="text"
 						bind:value={noteTaker}
 						class="w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white"
@@ -747,8 +776,11 @@
 					/>
 				</div>
 				<div>
-					<label class="mb-2 block text-sm font-medium text-gray-300">Distribution Date</label>
+					<label for="distribution-date" class="mb-2 block text-sm font-medium text-gray-300"
+						>Distribution Date</label
+					>
 					<input
+						id="distribution-date"
 						type="date"
 						bind:value={distributionDate}
 						class="w-full rounded-lg border border-gray-600 bg-gray-700 p-2 text-white"
