@@ -1,6 +1,64 @@
 <script>
 	import { base } from '$app/paths';
-	// Placeholder for future interactivity
+
+	const tools = [
+		{
+			title: 'Should This Be A Meeting?',
+			color: 'var(--color-primary)',
+			description:
+				'Use our framework to determine if a meeting is necessary or if it can be handled asynchronously.',
+			features: [
+				'Interactive decision flowchart',
+				'Email templates for responses',
+				'Best practices guide'
+			],
+			link: base + '/tools/should-this-be-a-meeting',
+			linkText: 'Try Interactive Tool'
+		},
+		{
+			title: 'Meeting Notes Template',
+			color: 'var(--color-secondary)',
+			description:
+				'Interactive tool to create professional meeting notes with our standardized template.',
+			features: ['Agenda structure', 'Attendee tracking', 'Action item format'],
+			link: base + '/tools/meeting-notes',
+			linkText: 'Try Interactive Tool'
+		},
+		{
+			title: 'Action Item Tracker',
+			color: 'var(--color-accent)',
+			description: 'Simple templates and guides for tracking meeting action items and follow-ups.',
+			features: ['Task tracking template', 'Due date management', 'Status updates'],
+			link: '#',
+			linkText: 'Download Tracker'
+		},
+		{
+			title: 'Meeting Agenda Templates',
+			color: 'var(--color-primary)',
+			description:
+				'Pre-designed templates for different types of meetings and best practices guide.',
+			features: ['Sales discovery calls', 'Project check-ins', 'Partnership meetings'],
+			link: '#',
+			linkText: 'Get Templates'
+		},
+		{
+			title: 'Contact Management Guide',
+			color: 'var(--color-secondary)',
+			description: 'Simple templates and guides for managing meeting contacts and relationships.',
+			features: ['Contact sheet template', 'CRM integration guide', 'Follow-up templates'],
+			link: '#',
+			linkText: 'Download Guide'
+		},
+		{
+			title: 'Meeting Cost Calculator',
+			color: 'var(--color-accent)',
+			description:
+				'Calculate the real cost of your meetings and understand the ROI of better meeting practices.',
+			features: ['Interactive calculator', 'Cost breakdown', 'ROI analysis'],
+			link: '#',
+			linkText: 'Try Calculator'
+		}
+	];
 </script>
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
@@ -29,7 +87,7 @@
 			class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-primary)_0%,_transparent_70%)] opacity-5"
 		></div>
 		<div class="relative z-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-			{#each [{ title: 'Should This Be A Meeting?', color: 'var(--color-primary)', description: 'Use our framework to determine if a meeting is necessary or if it can be handled asynchronously.', features: ['Interactive decision flowchart', 'Email templates for responses', 'Best practices guide'], link: base + '/tools/should-this-be-a-meeting', linkText: 'Try Interactive Tool' }, { title: 'Meeting Notes Template', color: 'var(--color-secondary)', description: 'Standardized templates for capturing meeting notes and action items effectively.', features: ['Agenda structure', 'Attendee tracking', 'Action item format'], link: '#', linkText: 'Get Templates' }, { title: 'Action Item Tracker', color: 'var(--color-accent)', description: 'Simple templates and guides for tracking meeting action items and follow-ups.', features: ['Task tracking template', 'Due date management', 'Status updates'], link: '#', linkText: 'Download Tracker' }, { title: 'Meeting Agenda Templates', color: 'var(--color-primary)', description: 'Pre-designed templates for different types of meetings and best practices guide.', features: ['Sales discovery calls', 'Project check-ins', 'Partnership meetings'], link: '#', linkText: 'Get Templates' }, { title: 'Contact Management Guide', color: 'var(--color-secondary)', description: 'Simple templates and guides for managing meeting contacts and relationships.', features: ['Contact sheet template', 'CRM integration guide', 'Follow-up templates'], link: '#', linkText: 'Download Guide' }, { title: 'Meeting Cost Calculator', color: 'var(--color-accent)', description: 'Calculate the real cost of your meetings and understand the ROI of better meeting practices.', features: ['Interactive calculator', 'Cost breakdown', 'ROI analysis'], link: '#', linkText: 'Try Calculator' }] as tool}
+			{#each tools as tool}
 				<div
 					class="group relative flex flex-col rounded-2xl border bg-[var(--color-bg-dark)] p-8 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
 					style="border-color: {tool.color};"

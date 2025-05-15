@@ -4,7 +4,7 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"dev": "vite dev --port 3000",
+		"dev": "vite dev --port 3000 --open",
 		"deploy": "npm run build && copy CNAME build\\CNAME && gh-pages -d build",
 		"build": "set NODE_ENV=production && vite build",
 		"preview": "vite preview",
