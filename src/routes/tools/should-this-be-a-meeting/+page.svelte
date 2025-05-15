@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-
 	// Types
 	type Goal = {
 		id: string;
@@ -442,6 +440,27 @@ Best,
 	function copyTemplate(content: string) {
 		navigator.clipboard.writeText(content);
 	}
+
+	// Share function using Web Share API
+	async function sharePage() {
+		const shareData = {
+			title: 'Should This Be A Meeting? | MeetingHero.AI',
+			text: 'I just used MeetingHero.AI\'s "Should This Be A Meeting?" tool to optimize my meeting strategy! Try it out:',
+			url: window.location.href
+		};
+
+		try {
+			if (navigator.share) {
+				await navigator.share(shareData);
+			} else {
+				// Fallback for browsers that don't support Web Share API
+				await navigator.clipboard.writeText(window.location.href);
+				alert('Link copied to clipboard!');
+			}
+		} catch (err) {
+			console.error('Error sharing:', err);
+		}
+	}
 </script>
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
@@ -594,5 +613,23 @@ Best,
 			can reclaim hours for focused work, reduce meeting fatigue for yourself and your team, improve
 			communication clarity, and ensure that when you do meet, it's for a clear, productive purpose.
 		</p>
+
+		<!-- Share Section -->
+		<div class="mt-8">
+			<button
+				class="flex items-center gap-2 rounded-full bg-[var(--color-primary)] px-6 py-3 text-white transition-colors hover:bg-[var(--color-secondary)]"
+				onclick={sharePage}
+			>
+				<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
+					/>
+				</svg>
+				Share This Tool
+			</button>
+		</div>
 	</section>
 </div>
