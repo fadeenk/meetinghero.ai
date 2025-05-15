@@ -59,10 +59,16 @@
 		{
 			title: 'Contact Management Guide',
 			color: 'var(--color-accent)',
-			description: 'Simple templates and guides for managing meeting contacts and relationships.',
-			features: ['Contact sheet template', 'CRM integration guide', 'Follow-up templates'],
-			link: '#',
-			linkText: 'Download Guide'
+			description:
+				'A comprehensive guide to turn meeting connections into valuable professional relationships, with practical templates and best practices.',
+			features: [
+				'4-phase contact management system',
+				'Ready-to-use email templates',
+				'LinkedIn connection strategies',
+				'Contact tracking framework'
+			],
+			link: base + '/tools/contact-management',
+			linkText: 'View Guide'
 		}
 	];
 </script>
