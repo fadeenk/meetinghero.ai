@@ -98,7 +98,7 @@
 				'Meeting Distribution by Day',
 				'Meeting Duration Breakdown'
 			],
-			benefit: 'Visualize your meeting activity and the value MH.AI provides.',
+			benefit: 'Visualize your meeting activity and the value MeetingHero.AI provides.',
 			reverse: false
 		},
 		{
@@ -108,7 +108,8 @@
 			color: 'var(--color-secondary)',
 			description: 'Profiles are saved and searchable in your dashboard.',
 			features: [],
-			benefit: 'Build a personal CRM of meeting contacts and their background.',
+			benefit:
+				'Create and maintain a searchable database of your meeting contacts and their information.',
 			reverse: true
 		}
 	];
