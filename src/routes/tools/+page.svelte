@@ -46,9 +46,15 @@
 			color: 'var(--color-secondary)',
 			description:
 				'Pre-designed templates for different types of meetings and best practices guide.',
-			features: ['Sales discovery calls', 'Project check-ins', 'Partnership meetings'],
-			link: '#',
-			linkText: 'Get Templates'
+			features: [
+				'Weekly team syncs',
+				'Project kick-offs',
+				'Decision-making meetings',
+				'Brainstorming sessions',
+				'Problem-solving meetings'
+			],
+			link: base + '/tools/meeting-agenda-templates',
+			linkText: 'View Templates'
 		},
 		{
 			title: 'Contact Management Guide',
