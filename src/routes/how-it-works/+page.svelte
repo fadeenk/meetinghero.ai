@@ -1,5 +1,52 @@
 <script>
-	// Placeholder for future interactivity or image imports
+	import calendarImg from './calendar.png';
+	import aiImg from './ai.png';
+	import deliveryImg from './delivery.png';
+
+	const steps = [
+		{
+			step: 1,
+			title: 'Seamless Calendar Integration',
+			color: 'var(--color-primary)',
+			description:
+				'Connect your Google or Outlook calendar in seconds. Your data is always secure, and you choose which calendars to sync.',
+			features: [
+				'Fast, secure authentication',
+				'Select which calendars to sync',
+				'Privacy-first: you control your data'
+			],
+			image: calendarImg,
+			reverse: false
+		},
+		{
+			step: 2,
+			title: 'AI-Powered Research',
+			color: 'var(--color-secondary)',
+			description:
+				'MeetingHero.AI automatically identifies your meeting attendees (excluding internal team members, based on your settings) and gathers relevant, publicly available information.',
+			features: [
+				'Pulls from trusted public sources (e.g., LinkedIn, news, company sites)',
+				'Focuses on relevance and conciseness',
+				'Customizable to your preferences'
+			],
+			image: aiImg,
+			reverse: true
+		},
+		{
+			step: 3,
+			title: 'Tailored Prep Delivery',
+			color: 'var(--color-accent)',
+			description:
+				'Receive your personalized prep document right where you need it—via email, calendar invite, or your MeetingHero.AI dashboard. Choose your preferred delivery method and timing (e.g., 15 minutes before your meeting).',
+			features: [
+				'Flexible delivery: email, calendar, dashboard',
+				'Customizable timing',
+				'Clear, actionable insights'
+			],
+			image: deliveryImg,
+			reverse: false
+		}
+	];
 </script>
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
@@ -22,7 +69,7 @@
 		</p>
 	</section>
 
-	{#each [{ step: 1, title: 'Seamless Calendar Integration', color: 'var(--color-primary)', description: 'Connect your Google or Outlook calendar in seconds. Your data is always secure, and you choose which calendars to sync.', features: ['Fast, secure authentication', 'Select which calendars to sync', 'Privacy-first: you control your data'], placeholder: '[Calendar Connection Screenshot]', reverse: false }, { step: 2, title: 'AI-Powered Research', color: 'var(--color-secondary)', description: 'MeetingHero.AI automatically identifies your meeting attendees (excluding internal team members, based on your settings) and gathers relevant, publicly available information.', features: ['Pulls from trusted public sources (e.g., LinkedIn, news, company sites)', 'Focuses on relevance and conciseness', 'Customizable to your preferences'], placeholder: '[AI Data Sources Graphic]', reverse: true }, { step: 3, title: 'Tailored Prep Delivery', color: 'var(--color-accent)', description: 'Receive your personalized prep document right where you need it—via email, calendar invite, or your MeetingHero.AI dashboard. Choose your preferred delivery method and timing (e.g., 15 minutes before your meeting).', features: ['Flexible delivery: email, calendar, dashboard', 'Customizable timing', 'Clear, actionable insights'], placeholder: '[Prep Delivery Screenshot]', reverse: false }] as step, i}
+	{#each steps as step, i}
 		<section
 			class="relative flex w-full flex-col items-center px-4 py-24"
 			style="background: {i % 2 === 0 ? 'var(--color-bg)' : 'var(--color-bg-dark)'};"
@@ -59,12 +106,10 @@
 				</div>
 				<div class="flex flex-1 justify-center">
 					<div
-						class="group flex h-64 w-80 items-center justify-center rounded-2xl border-2 bg-[var(--color-bg-dark)] text-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+						class="group flex h-80 w-96 items-center justify-center overflow-hidden rounded-2xl border-2 bg-[var(--color-bg-dark)] text-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
 						style="border-color: {step.color}; color: {step.color};"
 					>
-						<span class="transform transition-transform duration-300 group-hover:scale-110"
-							>{step.placeholder}</span
-						>
+						<img src={step.image} alt={step.title} class="h-full w-full object-contain p-4" />
 					</div>
 				</div>
 			</div>
