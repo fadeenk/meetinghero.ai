@@ -56,7 +56,7 @@
 <SEO
 	title="Pricing - MeetingHero.ai"
 	description="Simple pricing plans starting at $4.20/month. Save hours of manual research for less than the cost of a coffee. Try free for 7 days, no credit card required."
-	image="/logo.png"
+	image="/og-image.png"
 	url="/pricing"
 />
 

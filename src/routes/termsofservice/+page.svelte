@@ -6,7 +6,7 @@
 <SEO
 	title="Terms of Service - MeetingHero.ai"
 	description="Read MeetingHero.ai's Terms of Service. Learn about account responsibilities, service usage, and legal terms governing your use of our AI-powered meeting assistant."
-	image="/logo.png"
+	image="/og-image.png"
 	url="/termsofservice"
 />
 

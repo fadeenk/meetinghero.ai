@@ -150,7 +150,7 @@
 <SEO
 	title="Meeting Cost Calculator - MeetingHero.ai"
 	description="Calculate the real cost of your meetings with our interactive calculator. Understand meeting ROI and optimize your team's time investment."
-	image="/logo.png"
+	image="/og-image.png"
 	url="/tools/meeting-cost-calculator"
 />
 

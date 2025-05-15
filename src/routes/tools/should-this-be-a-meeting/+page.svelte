@@ -467,7 +467,7 @@ Best,
 <SEO
 	title="Should This Be A Meeting? - MeetingHero.ai"
 	description="Use our interactive decision tool to determine if your meeting is necessary or if it can be handled asynchronously. Get email templates and best practices."
-	image="/logo.png"
+	image="/og-image.png"
 	url="/tools/should-this-be-a-meeting"
 />
 

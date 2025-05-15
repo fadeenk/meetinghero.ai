@@ -2,7 +2,7 @@
 	export let title = 'MeetingHero.ai - AI-Powered Meeting Assistant';
 	export let description =
 		'Transform your meetings with AI-powered transcription, summarization, and insights. Get real-time meeting assistance and automated follow-ups.';
-	export let image = '/logo.png';
+	export let image = '/og-image.png';
 	export let url = '';
 	export let type = 'website';
 

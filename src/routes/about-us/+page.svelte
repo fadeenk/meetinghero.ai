@@ -6,7 +6,7 @@
 <SEO
 	title="About Us - MeetingHero.ai"
 	description="Meet Fadee Kannah, founder of MeetingHero.ai. Learn about our mission to help professionals save time and have more successful meetings through AI-powered meeting preparation."
-	image="/logo.png"
+	image="/og-image.png"
 	url="/about-us"
 />
 

@@ -6,7 +6,7 @@
 <SEO
 	title="FAQ - MeetingHero.ai"
 	description="Find answers to common questions about MeetingHero.ai. Learn about calendar integration, data privacy, features, and billing. Contact our support team for additional help."
-	image="/logo.png"
+	image="/og-image.png"
 	url="/faq"
 />
 

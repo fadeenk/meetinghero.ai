@@ -29,7 +29,7 @@
 <SEO
 	title="Contact Management Guide - MeetingHero.ai"
 	description="Learn how to turn meeting connections into valuable professional relationships. Get practical templates, LinkedIn strategies, and a 4-phase contact management system."
-	image="/logo.png"
+	image="/og-image.png"
 	url="/tools/contact-management"
 />
 

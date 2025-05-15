@@ -53,7 +53,7 @@
 <SEO
 	title="How It Works - MeetingHero.ai"
 	description="Learn how MeetingHero.ai automates your meeting prep in 3 simple steps. Connect your calendar, get AI-powered research, and receive tailored prep delivery."
-	image="/logo.png"
+	image="/og-image.png"
 	url="/how-it-works"
 />
 

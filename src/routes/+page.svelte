@@ -7,7 +7,7 @@
 <SEO
 	title="MeetingHero.ai - AI-Powered Meeting Assistant"
 	description="Transform your meetings with AI-powered transcription, summarization, and insights."
-	image="/logo.png"
+	image="/og-image.png"
 	url="/"
 />
 

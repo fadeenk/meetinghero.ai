@@ -77,7 +77,7 @@
 <SEO
 	title="Free Meeting Tools & Resources - MeetingHero.ai"
 	description="Enhance your meeting productivity with our free tools: Meeting Cost Calculator, Meeting Notes Generator, Action Item Tracker, Agenda Templates, and more."
-	image="/logo.png"
+	image="/og-image.png"
 	url="/tools"
 />
 

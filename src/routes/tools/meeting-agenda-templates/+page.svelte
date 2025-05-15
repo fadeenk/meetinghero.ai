@@ -389,7 +389,7 @@ ${template.agenda
 <SEO
 	title="Meeting Agenda Templates - MeetingHero.ai"
 	description="Access professional meeting agenda templates for team syncs, project kick-offs, decision-making, brainstorming, and problem-solving meetings."
-	image="/logo.png"
+	image="/og-image.png"
 	url="/tools/meeting-agenda-templates"
 />
 

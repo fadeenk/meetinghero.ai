@@ -110,7 +110,7 @@
 <SEO
 	title="Action Item Tracker - MeetingHero.ai"
 	description="Track and manage meeting action items efficiently with our interactive tool. Monitor tasks, due dates, and status updates in one place."
-	image="/logo.png"
+	image="/og-image.png"
 	url="/tools/action-item-tracker"
 />
 

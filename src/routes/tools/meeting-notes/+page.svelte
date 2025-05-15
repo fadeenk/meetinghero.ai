@@ -312,7 +312,7 @@
 <SEO
 	title="Meeting Notes Generator - MeetingHero.ai"
 	description="Create professional meeting notes with our interactive template. Track attendees, agenda items, discussion points, and action items in a structured format."
-	image="/logo.png"
+	image="/og-image.png"
 	url="/tools/meeting-notes"
 />
 

@@ -119,7 +119,7 @@
 <SEO
 	title="Features - MeetingHero.ai"
 	description="Discover powerful features to elevate your meeting game. Get AI-powered attendee intel, company deep dives, discussion starters, and more."
-	image="/logo.png"
+	image="/og-image.png"
 	url="/features"
 />
 
