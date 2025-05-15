@@ -1,4 +1,5 @@
 <script lang="ts">
+	import SEO from '$lib/components/SEO.svelte';
 	// Share function using Web Share API
 	async function sharePage() {
 		const shareData = {
@@ -24,6 +25,13 @@
 		navigator.clipboard.writeText(content);
 	}
 </script>
+
+<SEO
+	title="Contact Management Guide - MeetingHero.ai"
+	description="Learn how to turn meeting connections into valuable professional relationships. Get practical templates, LinkedIn strategies, and a 4-phase contact management system."
+	image="/logo.png"
+	url="/tools/contact-management"
+/>
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
 	<!-- Headline -->

@@ -1,5 +1,6 @@
 <script>
 	import { base } from '$app/paths';
+	import SEO from '$lib/components/SEO.svelte';
 
 	const tools = [
 		{
@@ -72,6 +73,13 @@
 		}
 	];
 </script>
+
+<SEO
+	title="Free Meeting Tools & Resources - MeetingHero.ai"
+	description="Enhance your meeting productivity with our free tools: Meeting Cost Calculator, Meeting Notes Generator, Action Item Tracker, Agenda Templates, and more."
+	image="/logo.png"
+	url="/tools"
+/>
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
 	<!-- Headline -->

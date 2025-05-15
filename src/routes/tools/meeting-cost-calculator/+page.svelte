@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
+	import SEO from '$lib/components/SEO.svelte';
 
 	// Types
 	type Participant = {
@@ -145,6 +146,13 @@
 		loadFromUrl();
 	});
 </script>
+
+<SEO
+	title="Meeting Cost Calculator - MeetingHero.ai"
+	description="Calculate the real cost of your meetings with our interactive calculator. Understand meeting ROI and optimize your team's time investment."
+	image="/logo.png"
+	url="/tools/meeting-cost-calculator"
+/>
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
 	<!-- Headline -->

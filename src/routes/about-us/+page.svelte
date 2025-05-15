@@ -1,6 +1,14 @@
 <script>
+	import SEO from '$lib/components/SEO.svelte';
 	// Placeholder for future interactivity or team images
 </script>
+
+<SEO
+	title="About Us - MeetingHero.ai"
+	description="Meet Fadee Kannah, founder of MeetingHero.ai. Learn about our mission to help professionals save time and have more successful meetings through AI-powered meeting preparation."
+	image="/logo.png"
+	url="/about-us"
+/>
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
 	<!-- Headline -->

@@ -1,4 +1,6 @@
 <script>
+	import SEO from '$lib/components/SEO.svelte';
+
 	const pricingInfo = [
 		{
 			name: 'Lite',
@@ -50,6 +52,13 @@
 		}
 	];
 </script>
+
+<SEO
+	title="Pricing - MeetingHero.ai"
+	description="Simple pricing plans starting at $4.20/month. Save hours of manual research for less than the cost of a coffee. Try free for 7 days, no credit card required."
+	image="/logo.png"
+	url="/pricing"
+/>
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
 	<!-- Headline -->

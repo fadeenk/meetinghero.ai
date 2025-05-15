@@ -1,10 +1,13 @@
 <script lang="ts">
 	import '../app.css';
 	import { base } from '$app/paths';
+	import SEO from '$lib/components/SEO.svelte';
 
 	let { children } = $props();
 	let mobileNavOpen = $state(false);
 </script>
+
+<SEO />
 
 <nav
 	class="sticky top-0 z-50 w-full border-b backdrop-blur-md transition-all duration-300"

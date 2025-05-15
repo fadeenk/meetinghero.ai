@@ -1,6 +1,14 @@
 <script>
+	import SEO from '$lib/components/SEO.svelte';
 	// Placeholder for future privacy policy content
 </script>
+
+<SEO
+	title="Privacy Policy - MeetingHero.ai"
+	description="Learn how MeetingHero.ai protects your privacy and handles your data. Our privacy policy covers data collection, usage, sharing, and security measures."
+	image="/logo.png"
+	url="/privacypolicy"
+/>
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
 	<!-- Headline -->

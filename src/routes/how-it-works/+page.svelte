@@ -2,6 +2,7 @@
 	import calendarImg from './calendar.png';
 	import aiImg from './ai.png';
 	import deliveryImg from './delivery.png';
+	import SEO from '$lib/components/SEO.svelte';
 
 	const steps = [
 		{
@@ -48,6 +49,13 @@
 		}
 	];
 </script>
+
+<SEO
+	title="How It Works - MeetingHero.ai"
+	description="Learn how MeetingHero.ai automates your meeting prep in 3 simple steps. Connect your calendar, get AI-powered research, and receive tailored prep delivery."
+	image="/logo.png"
+	url="/how-it-works"
+/>
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
 	<section

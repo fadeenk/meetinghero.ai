@@ -7,6 +7,7 @@
 	import delivery from './delivery.png';
 	import dashboard from './dashboard.png';
 	import database from './database.png';
+	import SEO from '$lib/components/SEO.svelte';
 
 	let selectedImage: string | null = null;
 
@@ -114,6 +115,13 @@
 		}
 	];
 </script>
+
+<SEO
+	title="Features - MeetingHero.ai"
+	description="Discover powerful features to elevate your meeting game. Get AI-powered attendee intel, company deep dives, discussion starters, and more."
+	image="/logo.png"
+	url="/features"
+/>
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
 	<!-- Headline & Intro -->

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import SEO from '$lib/components/SEO.svelte';
 	// Types
 	type Goal = {
 		id: string;
@@ -462,6 +463,13 @@ Best,
 		}
 	}
 </script>
+
+<SEO
+	title="Should This Be A Meeting? - MeetingHero.ai"
+	description="Use our interactive decision tool to determine if your meeting is necessary or if it can be handled asynchronously. Get email templates and best practices."
+	image="/logo.png"
+	url="/tools/should-this-be-a-meeting"
+/>
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
 	<!-- Headline -->

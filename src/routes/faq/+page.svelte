@@ -1,6 +1,14 @@
 <script>
+	import SEO from '$lib/components/SEO.svelte';
 	// Placeholder for future interactivity (e.g., accordion)
 </script>
+
+<SEO
+	title="FAQ - MeetingHero.ai"
+	description="Find answers to common questions about MeetingHero.ai. Learn about calendar integration, data privacy, features, and billing. Contact our support team for additional help."
+	image="/logo.png"
+	url="/faq"
+/>
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
 	<!-- Headline -->

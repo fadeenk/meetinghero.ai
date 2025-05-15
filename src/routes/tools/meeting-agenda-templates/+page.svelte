@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import SEO from '$lib/components/SEO.svelte';
 
 	type AgendaItem = {
 		topic: string;
@@ -384,6 +385,13 @@ ${template.agenda
 		}, 2000);
 	}
 </script>
+
+<SEO
+	title="Meeting Agenda Templates - MeetingHero.ai"
+	description="Access professional meeting agenda templates for team syncs, project kick-offs, decision-making, brainstorming, and problem-solving meetings."
+	image="/logo.png"
+	url="/tools/meeting-agenda-templates"
+/>
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
 	<!-- Headline -->

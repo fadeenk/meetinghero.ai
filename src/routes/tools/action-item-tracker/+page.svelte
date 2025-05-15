@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import SEO from '$lib/components/SEO.svelte';
 
 	// Types
 	type ActionItem = {
@@ -105,6 +106,13 @@
 		})
 	);
 </script>
+
+<SEO
+	title="Action Item Tracker - MeetingHero.ai"
+	description="Track and manage meeting action items efficiently with our interactive tool. Monitor tasks, due dates, and status updates in one place."
+	image="/logo.png"
+	url="/tools/action-item-tracker"
+/>
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
 	<!-- Headline -->

@@ -1,6 +1,14 @@
 <script>
+	import SEO from '$lib/components/SEO.svelte';
 	// Placeholder for future ToS content
 </script>
+
+<SEO
+	title="Terms of Service - MeetingHero.ai"
+	description="Read MeetingHero.ai's Terms of Service. Learn about account responsibilities, service usage, and legal terms governing your use of our AI-powered meeting assistant."
+	image="/logo.png"
+	url="/termsofservice"
+/>
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
 	<!-- Headline -->
