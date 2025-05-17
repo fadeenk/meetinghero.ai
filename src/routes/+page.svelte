@@ -56,7 +56,7 @@
 				class="group relative overflow-hidden rounded-full px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:shadow-xl"
 				style="background: linear-gradient(to right, var(--color-primary), var(--color-secondary));"
 			>
-				<span class="relative z-10">Try Free for 7 Days</span>
+				<span class="relative z-10">Try It for Free for 7 Days</span>
 				<div
 					class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 group-hover:translate-x-full"
 				></div>
