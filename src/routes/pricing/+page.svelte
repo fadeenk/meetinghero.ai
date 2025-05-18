@@ -4,10 +4,11 @@
 	const pricingInfo = [
 		{
 			name: 'Lite',
-			monthlyPrice: '4.20',
-			yearlyPlan: '42.00',
+			monthlyPrice: 4.99,
+			yearlyPlan: 49.99,
 			features: [
 				'60 Individuals look ups',
+				'AI discussion points',
 				'Basic individual information',
 				'Basic company information',
 				'Recent company news',
@@ -24,6 +25,7 @@
 			yearlyPlan: 69.99,
 			features: [
 				'100 Individuals lookups',
+				'AI discussion points',
 				'Basic individual information',
 				'Basic company information',
 				'Recent company news',
@@ -40,6 +42,7 @@
 			yearlyPlan: 99.99,
 			features: [
 				'200 Individuals lookups',
+				'AI discussion points',
 				'Basic individual information',
 				'Basic company information',
 				'Recent company news',
@@ -55,7 +58,7 @@
 
 <SEO
 	title="Pricing - MeetingHero.ai"
-	description="Simple pricing plans starting at $4.20/month. Save hours of manual research for less than the cost of a coffee. Try free for 7 days, no credit card required."
+	description="Simple pricing plans starting at $4.99/month. Save hours of manual research for less than the cost of a coffee. Try free for 7 days, no credit card required."
 	image="/og-image.png"
 	url="/pricing"
 />
