@@ -8,8 +8,6 @@
 	const pages = ['Home', 'How It Works', 'Features', 'Tools', 'Pricing', 'FAQ', 'About Us'];
 </script>
 
-<SEO />
-
 <nav
 	class="sticky top-0 z-50 w-full border-b backdrop-blur-md transition-all duration-300"
 	style="background: rgba(0, 0, 0, 0.3); border-color: var(--color-bg-dark);"
