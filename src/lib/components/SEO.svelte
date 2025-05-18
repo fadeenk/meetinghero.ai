@@ -1,10 +1,12 @@
 <script lang="ts">
-	export let title = 'MeetingHero.ai - AI-Powered Meeting Assistant';
+	export let title = 'MeetingHero.AI: AI-Powered Meeting Prep & Insights';
 	export let description =
-		'Transform your meetings with AI-powered transcription, summarization, and insights. Get real-time meeting assistance and automated follow-ups.';
+		'Elevate your meetings with MeetingHero.AI. Get automated, AI-powered prep, directly in your calendar or email. Try it free!';
 	export let image = '/og-image.png';
 	export let url = '';
-	export let type = 'website';
+	export const type = 'website';
+	export const keywords =
+		'AI meeting prep, Automated meeting preparation, Meeting assistant AI, Calendar meeting prep, Attendee research tool, Meeting productivity tool, AI sales meeting prep, Business development meeting tool, Meeting attendee insights, Company background for meetings, Automated Rolodex, AI research assistant';
 
 	// Ensure URL is absolute
 	$: fullUrl = url ? `https://meetinghero.ai${url}` : 'https://meetinghero.ai';
@@ -16,6 +18,12 @@
 	<title>{title}</title>
 	<meta name="title" content={title} />
 	<meta name="description" content={description} />
+	<meta name="keywords" content={keywords} />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" content="#000000" />
+
+	<!-- Canonical URL -->
+	<link rel="canonical" href={fullUrl} />
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content={type} />
@@ -23,6 +31,7 @@
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
 	<meta property="og:image" content={fullImageUrl} />
+	<meta property="og:site_name" content="MeetingHero.ai" />
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image" />

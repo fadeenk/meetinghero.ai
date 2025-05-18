@@ -4,12 +4,7 @@
 	// Placeholder for future interactivity (e.g., modal, video, etc.)
 </script>
 
-<SEO
-	title="MeetingHero.ai - AI-Powered Meeting Assistant"
-	description="Transform your meetings with AI-powered transcription, summarization, and insights."
-	image="/og-image.png"
-	url="/"
-/>
+<SEO image="/og-image.png" url="/" />
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
 	<!-- Hero Section -->
