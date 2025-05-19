@@ -44,21 +44,24 @@
 			image: ai,
 			title: 'AI Discussion Starters',
 			desc: 'Get smart, relevant talking points for every meeting.',
-			color: 'var(--color-accent)'
+			color: 'var(--color-accent)',
+			benefit: 'Go Beyond Small Talk.\nAlways Have an Insight Ready'
 		},
 		{
 			icon: '🏢',
 			image: company,
 			title: 'Company Deep Dives',
 			desc: 'Instantly understand company context and news.',
-			color: 'var(--color-secondary)'
+			color: 'var(--color-secondary)',
+			benefit: "Demonstrate Your Commitment.\nShow You've Done Your Homework"
 		},
 		{
 			icon: '🧑‍💼',
 			image: intel,
 			title: 'Attendee Intel',
 			desc: 'Get rich profiles and backgrounds on everyone you meet.',
-			color: 'var(--color-primary)'
+			color: 'var(--color-primary)',
+			benefit: 'Know Your Audience.\nConnect Instantly'
 		}
 	];
 
@@ -90,15 +93,15 @@
 			class="mb-4 text-center text-4xl leading-tight font-bold drop-shadow-lg md:text-7xl"
 			style="color: var(--color-primary);"
 		>
-			Stop Scrambling,<br />
+			Ditch the Last-Minute Research<br />
 			<span
 				class="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] bg-clip-text text-transparent"
 			>
-				Start Your Meeting Prepared
+				Never Be Unprepared for a Meeting Again
 			</span>
 		</h1>
 		<p class="mb-8 max-w-2xl text-center text-lg text-gray-200 md:text-2xl">
-			Get Automated Intel on Attendees and Companies Before Every Meeting
+			Get comprehensive attendee and company intel delivered automatically before your meetings.
 		</p>
 		<!-- Visual Placeholder -->
 		<div
@@ -274,9 +277,9 @@
 					</div>
 					<h3 class="mb-2 text-xl font-bold">{feature.title}</h3>
 					<p class="text-center text-gray-300">{feature.desc}</p>
-					<div
-						class="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-transparent to-[{feature.color}] opacity-0 transition-opacity duration-300 group-hover:opacity-10"
-					></div>
+					<p style="color: var(--color-positive);" class="mt-4 text-center">
+						{@html feature.benefit.replace(/\n/g, '<br />')}
+					</p>
 				</div>
 			{/each}
 		</div>
@@ -366,8 +369,8 @@
 		</h2>
 		<div class="mb-12 max-w-5xl text-center">
 			<p class="mb-8 text-xl text-gray-200">
-				Start with a 7-day free trial and experience the power of automated meeting prep. All plans
-				include our full suite of AI insights, company news, and more
+				Start with a 7-day free trial and experience the power of automated meeting prep. <br />All
+				plans include our full suite of AI insights, company news, and more
 			</p>
 			<div class="grid gap-6 md:grid-cols-3">
 				<div
@@ -406,6 +409,10 @@
 				</div>
 			</div>
 		</div>
+		<p class="mb-8 text-center text-xl text-gray-300">
+			For less than the cost of a daily coffee, get hours of your time back and the confidence to
+			ace every meeting!
+		</p>
 		<div class="flex flex-col gap-4 md:flex-row">
 			<a
 				href="https://app.meetinghero.ai/"
