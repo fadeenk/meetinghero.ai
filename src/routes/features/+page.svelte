@@ -8,15 +8,22 @@
 	import dashboard from './dashboard.png';
 	import database from './database.png';
 	import SEO from '$lib/components/SEO.svelte';
+	import { trackFeatureInteraction, trackEngagement, trackNavigation } from '$lib/analytics';
 
 	let selectedImage: string | null = null;
 
-	function openFullScreen(image: string): void {
+	function openFullScreen(image: string, featureTitle: string): void {
 		selectedImage = image;
+		trackEngagement('feature_image_view', featureTitle);
 	}
 
 	function closeFullScreen(): void {
 		selectedImage = null;
+		trackEngagement('feature_image_close', '');
+	}
+
+	function handleFeatureInteraction(featureTitle: string, action: string): void {
+		trackFeatureInteraction(featureTitle, action);
 	}
 
 	const features = [
@@ -149,6 +156,8 @@
 		<section
 			class="relative flex w-full flex-col items-center px-4 py-24"
 			style="background: {i % 2 === 0 ? 'var(--color-bg)' : 'var(--color-bg-dark)'};"
+			onmouseenter={() => handleFeatureInteraction(feature.title, 'hover')}
+			aria-label={`${feature.title} section`}
 		>
 			<div
 				class="absolute inset-0 bg-[radial-gradient(circle_at_center,{feature.color}_0%,_transparent_70%)] opacity-5"
@@ -182,8 +191,8 @@
 					<div
 						class="group flex h-64 w-80 cursor-pointer items-center justify-center overflow-hidden rounded-2xl border-2 bg-[var(--color-bg-dark)] shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
 						style="border-color: {feature.color};"
-						onclick={() => openFullScreen(feature.image)}
-						onkeydown={(e) => e.key === 'Enter' && openFullScreen(feature.image)}
+						onclick={() => openFullScreen(feature.image, feature.title)}
+						onkeydown={(e) => e.key === 'Enter' && openFullScreen(feature.image, feature.title)}
 						role="button"
 						tabindex="0"
 						aria-label="View {feature.title} in full screen"
@@ -256,6 +265,7 @@
 			<a
 				href="https://app.meetinghero.ai/"
 				class="group relative inline-block rounded-full bg-[var(--color-primary)] px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
+				onclick={() => trackNavigation('Try Free Features', 'https://app.meetinghero.ai/')}
 			>
 				Get Started
 				<span

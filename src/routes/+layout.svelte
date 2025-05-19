@@ -1,22 +1,26 @@
 <script lang="ts">
 	import '../app.css';
 	import { base } from '$app/paths';
-	import { onMount } from 'svelte';
-	import { page } from '$app/stores';
-	import { trackPageView } from '$lib/analytics';
+	import { afterNavigate } from '$app/navigation';
+	import { browser } from '$app/environment';
+	import { trackPageView, trackNavigation, trackEvent } from '$lib/analytics';
 
-	onMount(() => {
-		// Track initial page view
-		trackPageView($page.url.pathname);
-
-		// Track subsequent page views
-		$: if ($page) {
-			trackPageView($page.url.pathname);
+	afterNavigate(({ from, to }) => {
+		if (browser && to && from?.url.pathname !== to.url.pathname) {
+			if (window.gtag) {
+				trackPageView(to.url.pathname);
+			}
 		}
 	});
+
 	let { children } = $props();
 	let mobileNavOpen = $state(false);
 	const pages = ['Home', 'How It Works', 'Features', 'Tools', 'Pricing', 'FAQ', 'About Us'];
+
+	function handleNavigation(item: string) {
+		const path = item === 'Home' ? `${base}/` : `${base}/${item.toLowerCase().replace(/ /g, '-')}`;
+		trackNavigation(item, path);
+	}
 </script>
 
 <nav
@@ -28,6 +32,7 @@
 			href={base + '/'}
 			class="group flex items-center gap-2 text-2xl font-bold tracking-tight transition-transform hover:scale-105"
 			style="color: var(--color-primary);"
+			onclick={() => handleNavigation('Home')}
 		>
 			<span class="relative">
 				MeetingHero.AI
@@ -41,6 +46,7 @@
 				<a
 					href={item === 'Home' ? base + '/' : base + '/' + item.toLowerCase().replace(/ /g, '-')}
 					class="relative text-white transition-all duration-300 hover:text-[var(--color-primary)]"
+					onclick={() => handleNavigation(item)}
 				>
 					{item}
 					<span
@@ -53,7 +59,10 @@
 		<button
 			class="flex items-center justify-center rounded-lg p-2 transition-all duration-300 hover:bg-[var(--color-bg-dark)] focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none md:hidden"
 			aria-label="Open navigation"
-			onclick={() => (mobileNavOpen = !mobileNavOpen)}
+			onclick={() => {
+				mobileNavOpen = !mobileNavOpen;
+				trackEvent('mobile_menu', { action: mobileNavOpen ? 'open' : 'close' });
+			}}
 		>
 			<div class="relative h-7 w-7">
 				<!-- Hamburger Icon -->
@@ -93,7 +102,10 @@
 				<a
 					href={item === 'Home' ? base + '/' : base + '/' + item.toLowerCase().replace(/ /g, '-')}
 					class="group relative flex items-center rounded-lg px-4 py-3 text-white transition-all duration-300 hover:bg-[var(--color-bg-dark)] hover:text-[var(--color-primary)]"
-					onclick={() => (mobileNavOpen = false)}
+					onclick={() => {
+						mobileNavOpen = false;
+						handleNavigation(item);
+					}}
 				>
 					<span class="relative flex items-center gap-3">
 						<!-- Navigation Icons -->
@@ -180,15 +192,21 @@
 	style="background: var(--color-bg); border-color: var(--color-bg-dark);"
 >
 	<div class="flex items-center gap-2">
-		<a href={base + '/'} class="text-lg font-bold" style="color: var(--color-primary);"
-			>MeetingHero.AI</a
+		<a
+			href={base + '/'}
+			class="text-lg font-bold"
+			style="color: var(--color-primary);"
+			onclick={() => handleNavigation('Home')}
 		>
+			MeetingHero.AI
+		</a>
 		<span>© {new Date().getFullYear()}. All rights reserved.</span>
 	</div>
 	<div class="mt-4 flex gap-6 md:mt-0">
 		<a
 			href={base + '/privacypolicy'}
 			class="group relative text-gray-400 transition-all duration-300 hover:text-[var(--color-primary)]"
+			onclick={() => handleNavigation('Privacy Policy')}
 		>
 			Privacy Policy
 			<span
@@ -198,6 +216,7 @@
 		<a
 			href={base + '/termsofservice'}
 			class="group relative text-gray-400 transition-all duration-300 hover:text-[var(--color-primary)]"
+			onclick={() => handleNavigation('Terms of Service')}
 		>
 			Terms of Service
 			<span

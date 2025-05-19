@@ -1,7 +1,12 @@
-<script>
+<script lang="ts">
 	import { base } from '$app/paths';
 	import SEO from '$lib/components/SEO.svelte';
+	import { trackNavigation, trackFeatureInteraction, trackEngagement } from '$lib/analytics';
 	// Placeholder for future interactivity (e.g., modal, video, etc.)
+
+	function handleFeatureClick(featureName: string) {
+		trackFeatureInteraction(featureName, 'click');
+	}
 </script>
 
 <SEO image="/og-image.png" url="/" />
@@ -37,7 +42,7 @@
 			<div class="absolute inset-0 z-10">
 				<iframe
 					class="h-full w-full"
-					src="https://www.youtube.com/embed/IDNpZuoeIOU"
+					src="https://www.youtube.com/embed/IDNpZuoeIOU?enablejsapi=1"
 					title="MeetingHero.AI Demo"
 					frameborder="0"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -50,6 +55,7 @@
 				href="https://app.meetinghero.ai/"
 				class="group relative overflow-hidden rounded-full px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:shadow-xl"
 				style="background: linear-gradient(to right, var(--color-primary), var(--color-secondary));"
+				onclick={() => trackNavigation('Try Free Home Hero', 'https://app.meetinghero.ai/')}
 			>
 				<span class="relative z-10">Try It for Free for 7 Days</span>
 				<div
@@ -60,6 +66,7 @@
 				href={base + '/how-it-works'}
 				class="group relative overflow-hidden rounded-full border px-8 py-4 text-lg font-semibold transition-all duration-300 hover:bg-[var(--color-bg-dark)]"
 				style="border-color: var(--color-primary); color: var(--color-primary);"
+				onclick={() => trackNavigation('How It Works', `${base}/how-it-works`)}
 			>
 				<span class="relative z-10">See How It Works</span>
 				<div
@@ -171,6 +178,11 @@
 				<div
 					class="group relative flex flex-col items-center rounded-2xl border p-8 shadow-lg transition-all duration-300 hover:shadow-xl"
 					style="background: var(--color-bg-dark); border-color: {feature.color};"
+					onclick={() => handleFeatureClick(feature.title)}
+					onkeydown={(e) =>
+						(e.key === 'Enter' || e.key === ' ') && handleFeatureClick(feature.title)}
+					role="button"
+					tabindex="0"
 				>
 					<span class="mb-4 text-4xl transition-transform duration-300 group-hover:scale-110"
 						>{feature.icon}</span
@@ -187,6 +199,7 @@
 			href={base + '/features'}
 			class="group relative z-10 mt-8 flex cursor-pointer items-center gap-2 text-lg font-semibold transition-all duration-300"
 			style="color: var(--color-primary);"
+			onclick={() => trackNavigation('All Features', `${base}/features`)}
 		>
 			See all features
 			<span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -238,6 +251,7 @@
 			href="https://app.meetinghero.ai/"
 			class="group relative overflow-hidden rounded-full px-12 py-4 text-xl font-bold text-white shadow-lg transition-all duration-300 hover:shadow-xl"
 			style="background: linear-gradient(to right, var(--color-primary), var(--color-secondary));"
+			onclick={() => trackNavigation('Try Free Testimonials', 'https://app.meetinghero.ai/')}
 		>
 			<span class="relative z-10">Try Free for 7 Days</span>
 			<div
