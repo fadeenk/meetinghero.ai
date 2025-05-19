@@ -232,10 +232,36 @@
 		</div> -->
 		<div class="mx-auto max-w-2xl text-center">
 			<blockquote class="mb-4 text-xl text-gray-300 italic">
-				"MeetingHero.AI made me feel prepared for every call. Huge time saver!"
+				"My calendar is packed. The last thing I need is to scramble before a crucial stakeholder
+				meeting. MeetingHero.AI cut my prep time by at least 75%, delivering a concise, powerful
+				brief directly to my calendar. I'm always the most prepared person in the room,
+				effortlessly."
 			</blockquote>
-			<span class="text-lg font-semibold" style="color: var(--color-primary);">— Luke Sophinos</span
+			<span class="text-lg font-semibold" style="color: var(--color-primary);"
+				>— Luke Sophinos, CEO, CourseKey</span
 			>
+		</div>
+		<div class="mx-auto max-w-2xl text-center">
+			<blockquote class="mb-4 text-xl text-gray-300 italic">
+				"As an Account Manager, building strong client relationships is key. MeetingHero.AI uncovers
+				details I'd never find on my own – like recent company news, background info and smart
+				discussion points. It’s incredible for sparking genuine conversations and showing I'm truly
+				invested."
+			</blockquote>
+			<span class="text-lg font-semibold" style="color: var(--color-primary);"
+				>— Beta User, Client Success Manager</span
+			>
+
+			<div class="mx-auto max-w-2xl text-center">
+				<blockquote class="mb-4 text-xl text-gray-300 italic">
+					"I was skeptical about another 'AI tool' but MeetingHero.AI is genuinely transformative.
+					Setup took seconds, and it seamlessly integrates with my Google calendar. The automated
+					briefs appear as if by magic. I can't imagine my workflow without it now."
+				</blockquote>
+				<span class="text-lg font-semibold" style="color: var(--color-primary);"
+					>— Beta User, Sales Director</span
+				>
+			</div>
 		</div>
 	</section>
 
