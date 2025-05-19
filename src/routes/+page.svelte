@@ -6,6 +6,32 @@
 	import intel from './features/intel.png';
 	import company from './features/company.png';
 
+	const benefits = [
+		{
+			icon: '⏳',
+			title: 'Reclaim Your Schedule: Slash Prep Time by Hours',
+			desc: 'Stop wasting precious hours manually digging through LinkedIn profiles, company websites, and news articles. MeetingHero.AI automates the research, delivering comprehensive briefings in minutes, so you can focus on strategy, not searching.',
+			color: 'var(--color-primary)'
+		},
+		{
+			icon: '💡',
+			title: 'Never Be Caught Off Guard Again',
+			desc: 'Impress attendees by seamlessly referencing their alma mater, a recent industry award they won, or a key company announcement. Our AI-powered insights ensure you’re always prepared and perceived as knowledgeable.',
+			color: 'var(--color-secondary)'
+		},
+		{
+			icon: '🤝',
+			title: 'Have deeper & more meaningful conversations',
+			desc: "Show you've done your homework. Reference a recent project they led or a university they attended t create personalized touchpoints that make your conversations more memorable and impactful.",
+			color: 'var(--color-accent)'
+		},
+		{
+			icon: '⚡',
+			title: 'Seamless Intel Delivery: Always Prepared, Zero Effort',
+			desc: 'One-time setup takes seconds. Then, like magic, MeetingHero.AI automatically identifies upcoming meetings, gathers relevant intelligence from millions of sources, and delivers a concise, actionable summary right where you need it – your email or calendar.',
+			color: 'var(--color-secondary)'
+		}
+	];
 	// Placeholder for future interactivity (e.g., modal, video, etc.)
 
 	function handleFeatureClick(featureName: string) {
@@ -152,7 +178,7 @@
 			Key Benefits
 		</h2>
 		<div class="grid w-full max-w-6xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-			{#each [{ icon: '⏳', title: 'Save Time', desc: 'Save hours of prep time weekly.', color: 'var(--color-primary)' }, { icon: '💡', title: 'Be Confident & Informed', desc: 'Walk into every meeting confident and informed.', color: 'var(--color-secondary)' }, { icon: '🤝', title: 'Build Stronger Connections', desc: 'Have more personalized and productive conversations.', color: 'var(--color-accent)' }, { icon: '⚡', title: 'Effortless Automation', desc: 'Seamlessly plugs into your calendar.', color: 'var(--color-secondary)' }] as benefit}
+			{#each benefits as benefit}
 				<div
 					class="group relative flex flex-col items-center rounded-2xl border p-8 shadow-lg transition-all duration-300 hover:shadow-xl"
 					style="background: var(--color-bg-dark); border-color: {benefit.color};"
