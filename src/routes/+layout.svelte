@@ -1,8 +1,19 @@
 <script lang="ts">
 	import '../app.css';
 	import { base } from '$app/paths';
-	import SEO from '$lib/components/SEO.svelte';
+	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
+	import { trackPageView } from '$lib/analytics';
 
+	onMount(() => {
+		// Track initial page view
+		trackPageView($page.url.pathname);
+
+		// Track subsequent page views
+		$: if ($page) {
+			trackPageView($page.url.pathname);
+		}
+	});
 	let { children } = $props();
 	let mobileNavOpen = $state(false);
 	const pages = ['Home', 'How It Works', 'Features', 'Tools', 'Pricing', 'FAQ', 'About Us'];

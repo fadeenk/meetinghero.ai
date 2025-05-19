@@ -4,6 +4,23 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-99BZRSYLHM"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			window.gtag = function gtag() {
+				window.dataLayer.push(arguments);
+			};
+			gtag('js', new Date());
+
+			gtag('config', 'G-99BZRSYLHM', {
+				send_page_view: false,
+				linker: {
+					domains: ['app.meetinghero.ai', 'meetinghero.ai']
+				}
+			});
+		</script>
+
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
