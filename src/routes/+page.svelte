@@ -2,10 +2,50 @@
 	import { base } from '$app/paths';
 	import SEO from '$lib/components/SEO.svelte';
 	import { trackNavigation, trackFeatureInteraction, trackEngagement } from '$lib/analytics';
+	import ai from './features/ai.png';
+	import intel from './features/intel.png';
+	import company from './features/company.png';
+
 	// Placeholder for future interactivity (e.g., modal, video, etc.)
 
 	function handleFeatureClick(featureName: string) {
 		trackFeatureInteraction(featureName, 'click');
+	}
+
+	const features = [
+		{
+			icon: '💬',
+			image: ai,
+			title: 'AI Discussion Starters',
+			desc: 'Get smart, relevant talking points for every meeting.',
+			color: 'var(--color-accent)'
+		},
+		{
+			icon: '🏢',
+			image: company,
+			title: 'Company Deep Dives',
+			desc: 'Instantly understand company context and news.',
+			color: 'var(--color-secondary)'
+		},
+		{
+			icon: '🧑‍💼',
+			image: intel,
+			title: 'Attendee Intel',
+			desc: 'Get rich profiles and backgrounds on everyone you meet.',
+			color: 'var(--color-primary)'
+		}
+	];
+
+	let selectedImage: string | null = null;
+
+	function openFullScreen(image: string, featureTitle: string): void {
+		selectedImage = image;
+		trackEngagement('feature_image_view', featureTitle);
+	}
+
+	function closeFullScreen(): void {
+		selectedImage = null;
+		trackEngagement('feature_image_close', '');
 	}
 </script>
 
@@ -174,7 +214,7 @@
 			Feature Highlights
 		</h2>
 		<div class="grid w-full max-w-6xl grid-cols-1 gap-8 md:grid-cols-3">
-			{#each [{ icon: '🧑‍💼', title: 'Attendee Intel', desc: 'Get rich profiles and backgrounds on everyone you meet.', color: 'var(--color-primary)' }, { icon: '🏢', title: 'Company Deep Dives', desc: 'Instantly understand company context and news.', color: 'var(--color-secondary)' }, { icon: '💬', title: 'AI Discussion Starters', desc: 'Get smart, relevant talking points for every meeting.', color: 'var(--color-accent)' }] as feature}
+			{#each features as feature}
 				<div
 					class="group relative flex flex-col items-center rounded-2xl border p-8 shadow-lg transition-all duration-300 hover:shadow-xl"
 					style="background: var(--color-bg-dark); border-color: {feature.color};"
@@ -184,9 +224,28 @@
 					role="button"
 					tabindex="0"
 				>
-					<span class="mb-4 text-4xl transition-transform duration-300 group-hover:scale-110"
-						>{feature.icon}</span
+					<div
+						class="group mb-4 flex h-32 cursor-pointer items-center justify-center overflow-hidden rounded-2xl bg-[var(--color-bg-dark)] shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+						onclick={(e) => {
+							e.stopPropagation();
+							openFullScreen(feature.image, feature.title);
+						}}
+						onkeydown={(e) => {
+							if (e.key === 'Enter') {
+								e.stopPropagation();
+								openFullScreen(feature.image, feature.title);
+							}
+						}}
+						role="button"
+						tabindex="0"
+						aria-label="View {feature.title} in full screen"
 					>
+						<img
+							src={feature.image}
+							alt={feature.title}
+							class="h-full w-full transform object-contain transition-transform duration-300 group-hover:scale-110"
+						/>
+					</div>
 					<h3 class="mb-2 text-xl font-bold">{feature.title}</h3>
 					<p class="text-center text-gray-300">{feature.desc}</p>
 					<div
@@ -245,7 +304,7 @@
 			<blockquote class="mb-4 text-xl text-gray-300 italic">
 				"As an Account Manager, building strong client relationships is key. MeetingHero.AI uncovers
 				details I'd never find on my own – like recent company news, background info and smart
-				discussion points. It’s incredible for sparking genuine conversations and showing I'm truly
+				discussion points. It's incredible for sparking genuine conversations and showing I'm truly
 				invested."
 			</blockquote>
 			<span class="text-lg font-semibold" style="color: var(--color-primary);"
@@ -265,24 +324,124 @@
 		</div>
 	</section>
 
-	<!-- Secondary CTA -->
+	<!-- Pricing Section -->
 	<section
 		class="relative flex w-full flex-col items-center px-4 py-24"
-		style="background: linear-gradient(to top, var(--color-bg), var(--color-bg-dark));"
+		style="background: var(--color-bg);"
 	>
 		<div
 			class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--color-primary)_0%,_transparent_70%)] opacity-10"
 		></div>
-		<a
-			href="https://app.meetinghero.ai/"
-			class="group relative overflow-hidden rounded-full px-12 py-4 text-xl font-bold text-white shadow-lg transition-all duration-300 hover:shadow-xl"
-			style="background: linear-gradient(to right, var(--color-primary), var(--color-secondary));"
-			onclick={() => trackNavigation('Try Free Testimonials', 'https://app.meetinghero.ai/')}
+		<h2
+			class="mb-6 text-center text-3xl font-semibold md:text-4xl"
+			style="color: var(--color-primary);"
 		>
-			<span class="relative z-10">Try Free for 7 Days</span>
-			<div
-				class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 group-hover:translate-x-full"
-			></div>
-		</a>
+			Choose Your Perfect Plan
+		</h2>
+		<div class="mb-12 max-w-5xl text-center">
+			<p class="mb-8 text-xl text-gray-200">
+				Start with a 7-day free trial and experience the power of automated meeting prep. All plans
+				include our full suite of AI insights, company news, and more
+			</p>
+			<div class="grid gap-6 md:grid-cols-3">
+				<div
+					class="rounded-xl border p-6 transition-all duration-300 hover:shadow-lg"
+					style="border-color: var(--color-primary);"
+				>
+					<h3 class="mb-2 text-lg font-bold" style="color: var(--color-primary);">Starter Plan</h3>
+					<p class="mb-2 text-2xl font-bold text-white">
+						$4.99<span class="text-lg text-gray-300">/mo</span>
+					</p>
+					<p class="text-gray-300">60 individual lookups</p>
+				</div>
+				<div
+					class="rounded-xl border p-6 transition-all duration-300 hover:shadow-lg"
+					style="border-color: var(--color-secondary);"
+				>
+					<h3 class="mb-2 text-lg font-bold" style="color: var(--color-secondary);">
+						Premium Plan
+					</h3>
+					<p class="mb-2 text-2xl font-bold text-white">
+						$6.99<span class="text-lg text-gray-300">/mo</span>
+					</p>
+					<p class="text-gray-300">100 individual lookups</p>
+				</div>
+				<div
+					class="rounded-xl border p-6 transition-all duration-300 hover:shadow-lg"
+					style="border-color: var(--color-accent);"
+				>
+					<h3 class="mb-2 text-lg font-bold" style="color: var(--color-accent);">
+						Professional Plan
+					</h3>
+					<p class="mb-2 text-2xl font-bold text-white">
+						$9.99<span class="text-lg text-gray-300">/mo</span>
+					</p>
+					<p class="text-gray-300">200 individual lookups</p>
+				</div>
+			</div>
+		</div>
+		<div class="flex flex-col gap-4 md:flex-row">
+			<a
+				href="https://app.meetinghero.ai/"
+				class="group relative overflow-hidden rounded-full px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:shadow-xl"
+				style="background: linear-gradient(to right, var(--color-primary), var(--color-secondary));"
+				onclick={() => trackNavigation('Try Free Home pricing', 'https://app.meetinghero.ai/')}
+			>
+				<span class="relative z-10">Try It for Free for 7 Days</span>
+				<div
+					class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 group-hover:translate-x-full"
+				></div>
+			</a>
+			<a
+				href={base + '/pricing'}
+				class="group relative overflow-hidden rounded-full border px-8 py-4 text-lg font-semibold transition-all duration-300 hover:bg-[var(--color-bg-dark)]"
+				style="border-color: var(--color-primary); color: var(--color-primary);"
+				onclick={() => trackNavigation('Explore All Plans', `${base}/pricing`)}
+			>
+				<span class="relative z-10">Explore All Plans</span>
+				<div
+					class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-[var(--color-primary)]/10 to-transparent transition-transform duration-1000 group-hover:translate-x-full"
+				></div>
+			</a>
+		</div>
 	</section>
+
+	<!-- Full Screen Modal -->
+	{#if selectedImage}
+		<div
+			class="bg-opacity-90 fixed inset-0 z-50 flex items-center justify-center bg-black"
+			onclick={closeFullScreen}
+			onkeydown={(e) => e.key === 'Escape' && closeFullScreen()}
+			role="button"
+			tabindex="0"
+		>
+			<div class="relative max-h-[90vh] max-w-[90vw]">
+				<img
+					src={selectedImage}
+					alt="Full screen view"
+					class="max-h-[90vh] max-w-[90vw] object-contain"
+				/>
+				<button
+					class="absolute -top-4 -right-4 rounded-full bg-white p-2 text-black hover:bg-gray-200"
+					onclick={closeFullScreen}
+					aria-label="Close full screen view"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-6 w-6"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M6 18L18 6M6 6l12 12"
+						/>
+					</svg>
+				</button>
+			</div>
+		</div>
+	{/if}
 </div>
