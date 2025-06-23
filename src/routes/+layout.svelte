@@ -186,7 +186,7 @@
 	<!-- Mobile Nav Links -->
 	{#if mobileNavOpen}
 		<div
-			class="animate-fade-in-down fixed inset-x-0 top-[72px] z-40 flex flex-col gap-2 border-b border-[var(--color-bg-dark)] bg-[var(--color-bg)] px-4 py-4 shadow-lg backdrop-blur-md md:hidden"
+			class="animate-fade-in-down fixed inset-x-0 top-[72px] z-40 flex max-h-[calc(100vh-72px)] flex-col gap-2 overflow-y-auto border-b border-[var(--color-bg-dark)] bg-[var(--color-bg)] px-4 py-4 shadow-lg backdrop-blur-md md:hidden"
 			style="background: rgba(0, 0, 0, 0.95);"
 		>
 			{#each mainPages as item}
@@ -222,8 +222,14 @@
 						</svg>
 					</button>
 					{#if mobileToolsSubmenuOpen}
-						<div class="ml-4 flex flex-col gap-2 border-l-2 border-[var(--color-bg-dark)] pl-4">
-							<div class="px-3 py-2 text-xs font-semibold text-gray-400 uppercase">Tools</div>
+						<div
+							class="ml-4 flex max-h-60 flex-col gap-2 overflow-y-auto border-l-2 border-[var(--color-bg-dark)] pl-4"
+						>
+							<div
+								class="sticky top-0 z-10 bg-[var(--color-bg)] px-3 py-2 text-xs font-semibold text-gray-400 uppercase"
+							>
+								Tools
+							</div>
 							{#each toolsSubmenu as tool}
 								<a
 									href={base + tool.path}
@@ -237,7 +243,11 @@
 								</a>
 							{/each}
 							<div class="my-2 border-t border-[var(--color-bg-dark)]"></div>
-							<div class="px-3 py-2 text-xs font-semibold text-gray-400 uppercase">Use Cases</div>
+							<div
+								class="sticky top-0 z-10 bg-[var(--color-bg)] px-3 py-2 text-xs font-semibold text-gray-400 uppercase"
+							>
+								Use Cases
+							</div>
 							{#each usecases as usecase}
 								<a
 									href={base + usecase.path}
