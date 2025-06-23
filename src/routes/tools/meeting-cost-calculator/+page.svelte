@@ -240,9 +240,16 @@
 				<!-- Participants -->
 				<div class="mb-6">
 					<div class="mb-4 flex items-center justify-between">
-						<h3 class="text-lg font-semibold" style="color: var(--color-secondary);">
-							Participants
-						</h3>
+						<div class="flex items-center gap-2">
+							<h3 class="text-lg font-semibold" style="color: var(--color-secondary);">
+								Participants
+							</h3>
+							<span
+								class="rounded-full bg-[var(--color-accent)] px-2 py-1 text-xs font-medium text-white"
+							>
+								{participants.length}
+							</span>
+						</div>
 						<button
 							class="rounded-full bg-[var(--color-primary)] px-4 py-2 text-sm text-white transition-colors hover:bg-[var(--color-secondary)]"
 							onclick={addParticipant}
