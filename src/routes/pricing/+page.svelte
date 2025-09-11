@@ -102,7 +102,7 @@
 			</p>
 			<a
 				href="https://app.meetinghero.ai/"
-				class="group relative inline-block rounded-full bg-[var(--color-primary)] px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
+				class="group relative hidden inline-block rounded-full bg-[var(--color-primary)] px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
 			>
 				Start Your Free Trial
 				<span
@@ -152,7 +152,7 @@
 					</ul>
 					<a
 						href="https://app.meetinghero.ai/"
-						class="group relative inline-block w-full rounded-full bg-[var(--color-primary)] px-6 py-3 text-center text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
+						class="group relative hidden inline-block w-full rounded-full bg-[var(--color-primary)] px-6 py-3 text-center text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
 					>
 						{plan.buttonText}
 						<span

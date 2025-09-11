@@ -81,6 +81,13 @@
 <SEO image="/og-image.png" url="/" />
 
 <div class="flex min-h-screen flex-col font-sans text-white" style="background: var(--color-bg);">
+	<!-- Shutdown Banner -->
+	<div class="w-full bg-red-600 px-4 py-3 text-center">
+		<p class="text-lg font-semibold text-white">
+			⚠️ MeetingHero.AI will be shutting down on November 1, 2025. Thank you for your support! ⚠️
+		</p>
+	</div>
+
 	<!-- Hero Section -->
 	<section
 		class="relative flex w-full flex-col items-center justify-center overflow-hidden px-4 py-16"
@@ -122,7 +129,7 @@
 		<div class="flex flex-col gap-4 md:flex-row">
 			<a
 				href="https://app.meetinghero.ai/"
-				class="group relative overflow-hidden rounded-full px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:shadow-xl"
+				class="group relative hidden overflow-hidden rounded-full px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:shadow-xl"
 				style="background: linear-gradient(to right, var(--color-primary), var(--color-secondary));"
 				onclick={() => trackNavigation('Try Free Home Hero', 'https://app.meetinghero.ai/')}
 			>
@@ -416,7 +423,7 @@
 		<div class="flex flex-col gap-4 md:flex-row">
 			<a
 				href="https://app.meetinghero.ai/"
-				class="group relative overflow-hidden rounded-full px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:shadow-xl"
+				class="group relative hidden overflow-hidden rounded-full px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:shadow-xl"
 				style="background: linear-gradient(to right, var(--color-primary), var(--color-secondary));"
 				onclick={() => trackNavigation('Try Free Home pricing', 'https://app.meetinghero.ai/')}
 			>

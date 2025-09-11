@@ -150,7 +150,7 @@
 		<div class="flex flex-col gap-4 md:flex-row">
 			<a
 				href="https://app.meetinghero.ai/"
-				class="group relative overflow-hidden rounded-full px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:shadow-xl"
+				class="group relative hidden overflow-hidden rounded-full px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:shadow-xl"
 				style="background: linear-gradient(to right, var(--color-primary), var(--color-secondary));"
 				onclick={() => trackNavigation('Try Free Partnerships Hero', 'https://app.meetinghero.ai/')}
 			>
@@ -322,7 +322,7 @@
 		</p>
 		<a
 			href="https://app.meetinghero.ai/"
-			class="group relative overflow-hidden rounded-full px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:shadow-xl"
+			class="group relative hidden overflow-hidden rounded-full px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:shadow-xl"
 			style="background: linear-gradient(to right, var(--color-primary), var(--color-secondary));"
 			onclick={() =>
 				trackNavigation('Claim Free Trial Partnerships', 'https://app.meetinghero.ai/')}
