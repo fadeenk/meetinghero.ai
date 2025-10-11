@@ -84,7 +84,15 @@
 	<!-- Shutdown Banner -->
 	<div class="w-full bg-red-600 px-4 py-3 text-center">
 		<p class="text-lg font-semibold text-white">
-			⚠️ MeetingHero.AI will be shutting down on November 1, 2025. Thank you for your support! ⚠️
+			⚠️ MeetingHero.AI has shut down.
+			<a
+				href={base + '/shutdown'}
+				class="underline transition-all duration-300 hover:no-underline"
+				onclick={() => trackNavigation('Shutdown Info', `${base}/shutdown`)}
+			>
+				Learn more about why
+			</a>
+			⚠️
 		</p>
 	</div>
 
